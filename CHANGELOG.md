@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.0.0](https://github.com/snelling-a/base16.nvim/compare/v1.0.0...v2.0.0) (2023-05-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* reorganize file structure
+* no more vim colorschemes
+* build tools
+
+### Features
+
+* generate colorschemes ([b8c7add](https://github.com/snelling-a/base16.nvim/commit/b8c7adde9f61de308631120883550f2153b71aed))
+
+
+### refactor
+
+* build tools ([fe61510](https://github.com/snelling-a/base16.nvim/commit/fe615108430a69960656fed23d8b0612d711cf6c))
+
+
+### style
+
+* reorganize file structure ([075f818](https://github.com/snelling-a/base16.nvim/commit/075f8189c0739d7ec4c81abbb50ef0550eeee165))
+
 ## 1.0.0 (2023-05-25)
 
 
