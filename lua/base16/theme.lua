@@ -117,7 +117,7 @@ end
 --   'base0A', 'base0B', 'base0C', 'base0D', 'base0E', 'base0F'. Each key should
 --   map to a valid 6 digit hex color. If a string is provided, the
 --   corresponding table specifying the colorscheme will be used.
-function M.setup(colors, config)
+function M._load(colors, config)
 	M.with_config(config)
 
 	if type(colors) == "string" then
