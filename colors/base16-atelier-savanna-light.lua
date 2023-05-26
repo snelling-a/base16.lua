@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#55859b",
 	base0F = "#867469",
 })
+
+vim.g.colors_name = "base16-atelier-savanna-light"

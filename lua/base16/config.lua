@@ -32,8 +32,6 @@ function M.setup(colors)
 
 	M.colors = colors or M.colorschemes[vim.env.BASE16_THEME] or M.colorschemes["schemer-dark"]
 
-	vim.g.colors_name = "base16"
-
 	M.colorscheme(colors)
 end
 

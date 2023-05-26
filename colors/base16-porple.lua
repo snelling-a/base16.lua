@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#b74989",
 	base0F = "#986841",
 })
+
+vim.g.colors_name = "base16-porple"

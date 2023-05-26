@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#a90d91",
 	base0F = "#826b28",
 })
+
+vim.g.colors_name = "base16-cupertino"

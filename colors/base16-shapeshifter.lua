@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#f996e2",
 	base0F = "#69542d",
 })
+
+vim.g.colors_name = "base16-shapeshifter"

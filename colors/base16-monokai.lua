@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#ae81ff",
 	base0F = "#cc6633",
 })
+
+vim.g.colors_name = "base16-monokai"

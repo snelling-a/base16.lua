@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#65B8C1",
 	base0F = "#8E8E8E",
 })
+
+vim.g.colors_name = "base16-zenbones"

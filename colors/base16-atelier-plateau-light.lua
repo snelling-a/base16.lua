@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#8464c4",
 	base0F = "#bd5187",
 })
+
+vim.g.colors_name = "base16-atelier-plateau-light"

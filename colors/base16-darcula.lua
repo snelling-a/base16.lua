@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#cc7832",
 	base0F = "#808080",
 })
+
+vim.g.colors_name = "base16-darcula"

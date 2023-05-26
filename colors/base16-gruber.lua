@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#9e95c7",
 	base0F = "#cc8c3c",
 })
+
+vim.g.colors_name = "base16-gruber"

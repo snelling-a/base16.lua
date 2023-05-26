@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#9A93E1",
 	base0F = "#F2C38F",
 })
+
+vim.g.colors_name = "base16-nova"

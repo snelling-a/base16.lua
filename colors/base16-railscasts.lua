@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#b6b3eb",
 	base0F = "#bc9458",
 })
+
+vim.g.colors_name = "base16-railscasts"

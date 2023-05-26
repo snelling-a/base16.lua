@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#0f7ddb",
 	base0F = "#ffffff",
 })
+
+vim.g.colors_name = "base16-brogrammer"

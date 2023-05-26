@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#D4BFFF",
 	base0F = "#F29E74",
 })
+
+vim.g.colors_name = "base16-ayu-mirage"

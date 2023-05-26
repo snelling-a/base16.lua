@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#955ae7",
 	base0F = "#bf40bf",
 })
+
+vim.g.colors_name = "base16-atelier-cave"

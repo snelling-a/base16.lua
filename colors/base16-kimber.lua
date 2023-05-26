@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#86CACD",
 	base0F = "#704F4F",
 })
+
+vim.g.colors_name = "base16-kimber"

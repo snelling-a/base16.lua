@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#b888e2",
 	base0F = "#b888e2",
 })
+
+vim.g.colors_name = "base16-circus"

@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#78a38f",
 	base0F = "#a3a079",
 })
+
+vim.g.colors_name = "base16-uwunicorn"

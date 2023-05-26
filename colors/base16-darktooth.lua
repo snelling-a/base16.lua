@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#8F4673",
 	base0F = "#A87322",
 })
+
+vim.g.colors_name = "base16-darktooth"

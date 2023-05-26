@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#00bb00",
 	base0F = "#005500",
 })
+
+vim.g.colors_name = "base16-greenscreen"

@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#999999",
 	base0F = "#444444",
 })
+
+vim.g.colors_name = "base16-black-metal-marduk"

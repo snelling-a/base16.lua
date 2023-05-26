@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#ae94f9",
 	base0F = "#6187ff",
 })
+
+vim.g.colors_name = "base16-gigavolt"

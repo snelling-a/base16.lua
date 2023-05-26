@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#b870ce",
 	base0F = "#509c93",
 })
+
+vim.g.colors_name = "base16-edge-light"

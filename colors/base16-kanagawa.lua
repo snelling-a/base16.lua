@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#957FB8",
 	base0F = "#D27E99",
 })
+
+vim.g.colors_name = "base16-kanagawa"

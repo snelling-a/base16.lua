@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#9bc0c8",
 	base0F = "#d27b53",
 })
+
+vim.g.colors_name = "base16-darkmoss"

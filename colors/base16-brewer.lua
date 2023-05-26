@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#756bb1",
 	base0F = "#b15928",
 })
+
+vim.g.colors_name = "base16-brewer"

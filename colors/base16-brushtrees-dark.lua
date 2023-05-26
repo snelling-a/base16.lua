@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#b386b2",
 	base0F = "#b39f9f",
 })
+
+vim.g.colors_name = "base16-brushtrees-dark"

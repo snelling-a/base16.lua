@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#716cae",
 	base0F = "#8c70a7",
 })
+
+vim.g.colors_name = "base16-nebula"

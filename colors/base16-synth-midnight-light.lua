@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#ea5ce2",
 	base0F = "#cd6320",
 })
+
+vim.g.colors_name = "base16-synth-midnight-light"

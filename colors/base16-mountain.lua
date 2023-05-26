@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#ac8aac",
 	base0F = "#ac8a8c",
 })
+
+vim.g.colors_name = "base16-mountain"

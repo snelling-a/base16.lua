@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#a45782",
 	base0F = "#984d51",
 })
+
+vim.g.colors_name = "base16-tarot"

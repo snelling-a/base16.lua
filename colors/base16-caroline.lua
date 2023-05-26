@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#a63650",
 	base0F = "#893f45",
 })
+
+vim.g.colors_name = "base16-caroline"

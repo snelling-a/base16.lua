@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#ff6ac1",
 	base0F = "#b2643c",
 })
+
+vim.g.colors_name = "base16-snazzy"

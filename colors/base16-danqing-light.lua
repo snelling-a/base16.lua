@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#CCA4E3",
 	base0F = "#CA6924",
 })
+
+vim.g.colors_name = "base16-danqing-light"

@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#673ab7",
 	base0F = "#8d6e63",
 })
+
+vim.g.colors_name = "base16-material-vivid"

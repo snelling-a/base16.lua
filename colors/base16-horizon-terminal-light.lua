@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#EE64AC",
 	base0F = "#F9CBBE",
 })
+
+vim.g.colors_name = "base16-horizon-terminal-light"

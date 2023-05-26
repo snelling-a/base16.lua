@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#5f9182",
 	base0F = "#9d6c7c",
 })
+
+vim.g.colors_name = "base16-atelier-estuary"

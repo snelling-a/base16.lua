@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#BA8CFC",
 	base0F = "#B15F4A",
 })
+
+vim.g.colors_name = "base16-framer"

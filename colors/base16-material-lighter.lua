@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#7C4DFF",
 	base0F = "#E53935",
 })
+
+vim.g.colors_name = "base16-material-lighter"

@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#6679cc",
 	base0F = "#9c637a",
 })
+
+vim.g.colors_name = "base16-atelier-sulphurpool"

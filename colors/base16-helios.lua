@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#be4264",
 	base0F = "#c85e0d",
 })
+
+vim.g.colors_name = "base16-helios"

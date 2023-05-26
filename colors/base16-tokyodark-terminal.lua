@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#a485dd",
 	base0F = "#773440",
 })
+
+vim.g.colors_name = "base16-tokyodark-terminal"

@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#ea4aaa",
 	base0F = "#a04100",
 })
+
+vim.g.colors_name = "base16-primer-light"

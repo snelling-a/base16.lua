@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#BB99B4",
 	base0F = "#BAA58C",
 })
+
+vim.g.colors_name = "base16-cupcake"

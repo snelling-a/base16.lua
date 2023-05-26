@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#7b59c0",
 	base0F = "#cc33cc",
 })
+
+vim.g.colors_name = "base16-atelier-heath-light"

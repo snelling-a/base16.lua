@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#a074c4",
 	base0F = "#8a553f",
 })
+
+vim.g.colors_name = "base16-seti"

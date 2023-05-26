@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#a24030",
 	base0F = "#a24030",
 })
+
+vim.g.colors_name = "base16-pandora"

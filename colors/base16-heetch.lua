@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#82034C",
 	base0F = "#470546",
 })
+
+vim.g.colors_name = "base16-heetch"

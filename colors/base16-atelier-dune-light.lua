@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#b854d4",
 	base0F = "#d43552",
 })
+
+vim.g.colors_name = "base16-atelier-dune-light"

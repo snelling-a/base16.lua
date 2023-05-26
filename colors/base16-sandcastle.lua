@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#d75f5f",
 	base0F = "#a87322",
 })
+
+vim.g.colors_name = "base16-sandcastle"

@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#4e66b6",
 	base0F = "#c42775",
 })
+
+vim.g.colors_name = "base16-equilibrium-light"

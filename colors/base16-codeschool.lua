@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#c59820",
 	base0F = "#c98344",
 })
+
+vim.g.colors_name = "base16-codeschool"

@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#9e6ffe",
 	base0F = "#e8b882",
 })
+
+vim.g.colors_name = "base16-hardcore"

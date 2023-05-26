@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#825dc0",
 	base0F = "#c44392",
 })
+
+vim.g.colors_name = "base16-selenized-light"

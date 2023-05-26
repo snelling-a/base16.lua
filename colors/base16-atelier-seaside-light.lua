@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#ad2bee",
 	base0F = "#e619c3",
 })
+
+vim.g.colors_name = "base16-atelier-seaside-light"

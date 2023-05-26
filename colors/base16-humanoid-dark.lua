@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#f15ee3",
 	base0F = "#b27701",
 })
+
+vim.g.colors_name = "base16-humanoid-dark"

@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#c6a0f6",
 	base0F = "#f0c6c6",
 })
+
+vim.g.colors_name = "base16-catppuccin-macchiato"

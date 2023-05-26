@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#9198a3",
 	base0F = "#977d7c",
 })
+
+vim.g.colors_name = "base16-vulcan"

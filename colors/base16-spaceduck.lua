@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#b3a1e6",
 	base0F = "#ce6f8f",
 })
+
+vim.g.colors_name = "base16-spaceduck"

@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#9095ff",
 	base0F = "#d47ada",
 })
+
+vim.g.colors_name = "base16-evenok-dark"

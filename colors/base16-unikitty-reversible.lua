@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#b33ce8",
 	base0F = "#d41acd",
 })
+
+vim.g.colors_name = "base16-unikitty-reversible"

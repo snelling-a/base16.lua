@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#5e2180",
 	base0F = "#ba0d35",
 })
+
+vim.g.colors_name = "base16-sakura"

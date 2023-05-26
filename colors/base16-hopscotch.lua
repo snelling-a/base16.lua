@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#c85e7c",
 	base0F = "#b33508",
 })
+
+vim.g.colors_name = "base16-hopscotch"

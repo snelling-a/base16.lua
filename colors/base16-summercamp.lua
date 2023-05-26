@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#FF8080",
 	base0F = "#F69BE7",
 })
+
+vim.g.colors_name = "base16-summercamp"

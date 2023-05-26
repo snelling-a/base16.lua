@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#c4a7e7",
 	base0F = "#e5e5e5",
 })
+
+vim.g.colors_name = "base16-rose-pine"

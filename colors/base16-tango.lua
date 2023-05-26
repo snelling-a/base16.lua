@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#75507b",
 	base0F = "#34e2e2",
 })
+
+vim.g.colors_name = "base16-tango"

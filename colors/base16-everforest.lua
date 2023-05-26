@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#e67e80",
 	base0F = "#eaedc8",
 })
+
+vim.g.colors_name = "base16-everforest"

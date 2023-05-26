@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#e1a3ee",
 	base0F = "#deaf8f",
 })
+
+vim.g.colors_name = "base16-chalk"

@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#a31db1",
 	base0F = "#b03060",
 })
+
+vim.g.colors_name = "base16-spacemacs"

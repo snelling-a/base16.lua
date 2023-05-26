@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#007fff",
 	base0F = "#df206c",
 })
+
+vim.g.colors_name = "base16-pinky"

@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#B21889",
 	base0F = "#C77C48",
 })
+
+vim.g.colors_name = "base16-xcode-dusk"

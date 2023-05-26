@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#A363D5",
 	base0F = "#D73C9A",
 })
+
+vim.g.colors_name = "base16-solarflare-light"

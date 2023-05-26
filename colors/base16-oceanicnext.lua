@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#C594C5",
 	base0F = "#AB7967",
 })
+
+vim.g.colors_name = "base16-oceanicnext"

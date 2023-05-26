@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#945e80",
 	base0F = "#e78a4e",
 })
+
+vim.g.colors_name = "base16-gruvbox-material-light-soft"

@@ -50,8 +50,10 @@ get_schemes() {
 }
 
 purge_colors() {
+	echo "Purging old colorschemes..."
 	rm -rf "$colors_dir/*.lua"
-	sed -ne 's/^- base16-//p' "$theme_list"
+	echo "Purging old colorscheme list..."
+	sed -i "3,\$d" "$theme_list"
 }
 
 update_list() {
@@ -66,7 +68,7 @@ generate_lua() {
 		value=$(sed -ne 's/'"$color"': "\(.*\)".*/\1/p' "$scheme")
 		printf '\t%s = "%s",\n' "$color" "#$value"
 	done
-	echo "})"
+	printf '})\n\nvim.g.colors_name = "base16-%s"' "$(basename "$scheme" | cut -d. -f1)"
 }
 
 loop() {

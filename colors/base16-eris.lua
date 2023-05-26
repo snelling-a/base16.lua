@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#f768a3",
 	base0F = "#f768a3",
 })
+
+vim.g.colors_name = "base16-eris"

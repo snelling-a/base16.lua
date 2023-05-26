@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#9a70a4",
 	base0F = "#c43060",
 })
+
+vim.g.colors_name = "base16-atlas"

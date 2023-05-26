@@ -16,3 +16,5 @@ require("base16").setup({
 	base0E = "#D7AB54",
 	base0F = "#6D6D6D",
 })
+
+vim.g.colors_name = "base16-shadesmear-light"
