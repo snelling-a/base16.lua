@@ -85,7 +85,7 @@ function M._load(colors, config)
 	end
 	vim.cmd("set termguicolors")
 
-	M.colors = colors or M.colorschemes[vim.env.BASE16_THEME] or M.colorschemes["schemer-dark"]
+	M.colors = colors or M.colorschemes[vim.env.BASE16_THEME]
 	local hi = M.highlight
 
 	-- Vim editor colors
@@ -546,44 +546,5 @@ setmetatable(M.colorschemes, {
 		return t[key]
 	end,
 })
-
--- #16161D is called eigengrau and is kinda-ish the color your see when you
--- close your eyes. It makes for a really good background.
-M.colorschemes["schemer-dark"] = {
-	base00 = "#16161D",
-	base01 = "#3e4451",
-	base02 = "#2c313c",
-	base03 = "#565c64",
-	base04 = "#6c7891",
-	base05 = "#abb2bf",
-	base06 = "#9a9bb3",
-	base07 = "#c5c8e6",
-	base08 = "#e06c75",
-	base09 = "#d19a66",
-	base0A = "#e5c07b",
-	base0B = "#98c379",
-	base0C = "#56b6c2",
-	base0D = "#0184bc",
-	base0E = "#c678dd",
-	base0F = "#a06949",
-}
-M.colorschemes["schemer-medium"] = {
-	base00 = "#212226",
-	base01 = "#3e4451",
-	base02 = "#2c313c",
-	base03 = "#565c64",
-	base04 = "#6c7891",
-	base05 = "#abb2bf",
-	base06 = "#9a9bb3",
-	base07 = "#c5c8e6",
-	base08 = "#e06c75",
-	base09 = "#d19a66",
-	base0A = "#e5c07b",
-	base0B = "#98c379",
-	base0C = "#56b6c2",
-	base0D = "#0184bc",
-	base0E = "#c678dd",
-	base0F = "#a06949",
-}
 
 return M

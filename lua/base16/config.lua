@@ -30,7 +30,7 @@ function M.setup(colors)
 		vim.opt.termguicolors = true
 	end
 
-	M.colors = colors or M.colorschemes[vim.env.BASE16_THEME] or M.colorschemes["schemer-dark"]
+	M.colors = colors or M.colorschemes[vim.env.BASE16_THEME]
 
 	M.colorscheme(colors)
 end
