@@ -5,49 +5,6 @@
 -- http://vrl.cs.brown.edu/color
 
 local M = {}
-local hex_re = vim.regex("#\\x\\x\\x\\x\\x\\x")
-
-local HEX_DIGITS = {
-	["0"] = 0,
-	["1"] = 1,
-	["2"] = 2,
-	["3"] = 3,
-	["4"] = 4,
-	["5"] = 5,
-	["6"] = 6,
-	["7"] = 7,
-	["8"] = 8,
-	["9"] = 9,
-	["a"] = 10,
-	["b"] = 11,
-	["c"] = 12,
-	["d"] = 13,
-	["e"] = 14,
-	["f"] = 15,
-	["A"] = 10,
-	["B"] = 11,
-	["C"] = 12,
-	["D"] = 13,
-	["E"] = 14,
-	["F"] = 15,
-}
-
-local function hex_to_rgb(hex)
-	return HEX_DIGITS[string.sub(hex, 1, 1)] * 16 + HEX_DIGITS[string.sub(hex, 2, 2)],
-		HEX_DIGITS[string.sub(hex, 3, 3)] * 16 + HEX_DIGITS[string.sub(hex, 4, 4)],
-		HEX_DIGITS[string.sub(hex, 5, 5)] * 16 + HEX_DIGITS[string.sub(hex, 6, 6)]
-end
-
-local function rgb_to_hex(r, g, b) return bit.tohex(bit.bor(bit.lshift(r, 16), bit.lshift(g, 8), b), 6) end
-
-local function darken(hex, pct)
-	pct = 1 - pct
-	local r, g, b = hex_to_rgb(string.sub(hex, 2))
-	r = math.floor(r * pct)
-	g = math.floor(g * pct)
-	b = math.floor(b * pct)
-	return string.format("#%s", rgb_to_hex(r, g, b))
-end
 
 -- This is a bit of syntactic sugar for creating highlight groups.
 --
@@ -88,7 +45,6 @@ M.highlight = setmetatable({}, {
 function M.with_config(config)
 	M.config = vim.tbl_extend("force", {
 		telescope = true,
-		telescope_borders = false,
 		indentblankline = true,
 		notify = true,
 		ts_rainbow = true,
@@ -103,7 +59,7 @@ end
 --
 -- Builtin colorschemes can be found in the M.colorschemes table.
 --
--- The default Vim highlight groups (including User[1-9]), highlight groups
+-- The default Vim highlight groups (including User), highlight groups
 -- pertaining to Neovim's builtin LSP, and highlight groups pertaining to
 -- Treesitter will be defined.
 --
@@ -436,37 +392,15 @@ function M._load(colors, config)
 	hi.TreesitterContext = { guifg = nil, guibg = M.colors.base01, gui = "italic", guisp = nil }
 
 	if M.config.telescope then
-		if
-			not M.config.telescope_borders
-			and hex_re:match_str(M.colors.base00)
-			and hex_re:match_str(M.colors.base01)
-			and hex_re:match_str(M.colors.base02)
-		then
-			local darkerbg = darken(M.colors.base00, 0.1)
-			local darkercursorline = darken(M.colors.base01, 0.1)
-			local darkerstatusline = darken(M.colors.base02, 0.1)
-			hi.TelescopeBorder = { guifg = darkerbg, guibg = darkerbg, gui = nil, guisp = nil }
-			hi.TelescopePromptBorder = { guifg = darkerstatusline, guibg = darkerstatusline, gui = nil, guisp = nil }
-			hi.TelescopePromptNormal = { guifg = M.colors.base05, guibg = darkerstatusline, gui = nil, guisp = nil }
-			hi.TelescopePromptPrefix = { guifg = M.colors.base08, guibg = darkerstatusline, gui = nil, guisp = nil }
-			hi.TelescopeNormal = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
-			hi.TelescopePreviewTitle = { guifg = darkercursorline, guibg = M.colors.base0B, gui = nil, guisp = nil }
-			hi.TelescopePromptTitle = { guifg = darkercursorline, guibg = M.colors.base08, gui = nil, guisp = nil }
-			hi.TelescopeResultsTitle = { guifg = darkerbg, guibg = darkerbg, gui = nil, guisp = nil }
-			hi.TelescopeSelection = { guifg = nil, guibg = darkerstatusline, gui = nil, guisp = nil }
-			hi.TelescopePreviewLine = { guifg = nil, guibg = M.colors.base01, gui = "none", guisp = nil }
-		else
-			hi.TelescopeBorder = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-			hi.TelescopePromptBorder = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-			hi.TelescopePromptNormal = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-			hi.TelescopePromptPrefix = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-			hi.TelescopeNormal = { guifg = nil, guibg = M.colors.base00, gui = nil, guisp = nil }
-			hi.TelescopePreviewTitle = { guifg = M.colors.base01, guibg = M.colors.base0B, gui = nil, guisp = nil }
-			hi.TelescopePromptTitle = { guifg = M.colors.base01, guibg = M.colors.base08, gui = nil, guisp = nil }
-			hi.TelescopeResultsTitle = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-			hi.TelescopeSelection = { guifg = nil, guibg = M.colors.base01, gui = nil, guisp = nil }
-			hi.TelescopePreviewLine = { guifg = nil, guibg = M.colors.base01, gui = "none", guisp = nil }
-		end
+		hi.TelescopePromptBorder = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+		hi.TelescopePromptNormal = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+		hi.TelescopePromptPrefix = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+		hi.TelescopeNormal = { guifg = nil, guibg = M.colors.base00, gui = nil, guisp = nil }
+		hi.TelescopePreviewTitle = { guifg = M.colors.base01, guibg = M.colors.base0B, gui = nil, guisp = nil }
+		hi.TelescopePromptTitle = { guifg = M.colors.base01, guibg = M.colors.base08, gui = nil, guisp = nil }
+		hi.TelescopeResultsTitle = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+		hi.TelescopeSelection = { guifg = nil, guibg = M.colors.base01, gui = nil, guisp = nil }
+		hi.TelescopePreviewLine = { guifg = nil, guibg = M.colors.base01, gui = "none", guisp = nil }
 	end
 
 	if M.config.notify then
