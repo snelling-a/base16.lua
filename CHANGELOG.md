@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/snelling-a/base16.nvim/compare/v2.3.0...v2.4.0) (2023-05-29)
+
+
+### Features
+
+* add undercurl to diagnostics ([45e7ead](https://github.com/snelling-a/base16.nvim/commit/45e7eadd54b95346c0143d75e2a8a50035588a76))
+
 ## [2.3.0](https://github.com/snelling-a/base16.nvim/compare/v2.2.0...v2.3.0) (2023-05-29)
 
 
