@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/snelling-a/base16.nvim/compare/v2.1.0...v2.2.0) (2023-05-29)
+
+
+### Features
+
+* improved type annotations ([b992d43](https://github.com/snelling-a/base16.nvim/commit/b992d43b20a27939a87667a72737d37f821b8d45))
+
 ## [2.1.0](https://github.com/snelling-a/base16.nvim/compare/v2.0.0...v2.1.0) (2023-05-29)
 
 
