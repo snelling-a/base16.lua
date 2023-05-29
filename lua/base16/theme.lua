@@ -160,23 +160,18 @@ function M.load(colors)
 	Highlights.gitcommitSelectedFile = { fg = colors.base0B, bold = true }
 	-- }}}
 
+	-- Spelling highlighting {{{
+	Highlights.SpellBad = { link = "DiagnosticUnderlineError" }
+	Highlights.SpellLocal = { link = "DiagnosticUnderlineHint" }
+	Highlights.SpellCap = { undercurl = true, sp = colors.base0D }
+	Highlights.SpellRare = { link = "DiagnosticUnderlineWarning" }
+	-- }}}
 
-	-- Spelling Highlighting
-	Highlights.SpellBad = { sp = colors.base08 }
-	Highlights.SpellLocal = { sp = colors.base0C }
-	Highlights.SpellCap = { sp = colors.base0D }
-	Highlights.SpellRare = { sp = colors.base0E }
-
+	-- Diagnostics {{{
 	Highlights.DiagnosticError = { fg = colors.base08 }
 	Highlights.DiagnosticWarn = { fg = colors.base0E }
 	Highlights.DiagnosticInfo = { fg = colors.base05 }
 	Highlights.DiagnosticHint = { fg = colors.base0C }
-	Highlights.DiagnosticUnderlineError = { sp = colors.base08 }
-	Highlights.DiagnosticUnderlineWarning = { sp = colors.base0E }
-	Highlights.DiagnosticUnderlineWarn = { sp = colors.base0E }
-	Highlights.DiagnosticUnderlineInformation = { sp = colors.base0F }
-	Highlights.DiagnosticUnderlineHint = { sp = colors.base0C }
-
 	Highlights.LspReferenceText = { sp = colors.base04 }
 	Highlights.LspReferenceRead = { sp = colors.base04 }
 	Highlights.LspReferenceWrite = { sp = colors.base04 }
@@ -188,6 +183,12 @@ function M.load(colors)
 	Highlights.LspDiagnosticsUnderlineWarning = "DiagnosticUnderlineWarning"
 	Highlights.LspDiagnosticsUnderlineInformation = "DiagnosticUnderlineInformation"
 	Highlights.LspDiagnosticsUnderlineHint = "DiagnosticUnderlineHint"
+	Highlights.DiagnosticUnderlineError = { undercurl = true, sp = colors.base08 }
+	Highlights.DiagnosticUnderlineWarning = { undercurl = true, sp = colors.base0E }
+	Highlights.DiagnosticUnderlineWarn = { undercurl = true, sp = colors.base0E }
+	Highlights.DiagnosticUnderlineInformation = { undercurl = true, sp = colors.base0F }
+	Highlights.DiagnosticUnderlineHint = { undercurl = true, sp = colors.base0C }
+	-- }}}
 
 	Highlights.TSAnnotation = { fg = colors.base0F }
 	Highlights.TSAttribute = { fg = colors.base0A }
