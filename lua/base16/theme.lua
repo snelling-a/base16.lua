@@ -168,7 +168,7 @@ function M.load(colors)
 	-- }}}
 
 	-- Diagnostics {{{
-	Highlights.DiagnosticUnderlineOk = { undercurl = true, sp = colors.base0B }
+	Highlights.DiagnosticDeprecated = { fg = colors.base0F, strikethrough = true }
 	Highlights.DiagnosticError = { fg = colors.base08 }
 	Highlights.DiagnosticHint = { fg = colors.base0C }
 	Highlights.DiagnosticInfo = { fg = colors.base05 }
@@ -176,6 +176,7 @@ function M.load(colors)
 	Highlights.DiagnosticUnderlineError = { undercurl = true, sp = colors.base08 }
 	Highlights.DiagnosticUnderlineHint = { undercurl = true, sp = colors.base0C }
 	Highlights.DiagnosticUnderlineInfo = { undercurl = true, sp = colors.base05 }
+	Highlights.DiagnosticUnderlineOk = { undercurl = true, sp = colors.base0B }
 	Highlights.DiagnosticUnderlineWarn = { undercurl = true, sp = colors.base0E }
 	Highlights.DiagnosticUnderlineWarning = { undercurl = true, sp = colors.base0E }
 	Highlights.DiagnosticWarn = { fg = colors.base0E }
