@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.5.0](https://github.com/snelling-a/base16.nvim/compare/v2.4.0...v2.5.0) (2023-05-29)
+
+
+### Features
+
+* LSP highlighting including reference ([884ceee](https://github.com/snelling-a/base16.nvim/commit/884ceeed1056fcca41298141a4d5105f43a55ec8))
+
+
+### Bug Fixes
+
+* diagnostics ([6585f92](https://github.com/snelling-a/base16.nvim/commit/6585f9282928919b2850b7afc18ad904763989d3))
+
 ## [2.4.0](https://github.com/snelling-a/base16.nvim/compare/v2.3.0...v2.4.0) (2023-05-29)
 
 
