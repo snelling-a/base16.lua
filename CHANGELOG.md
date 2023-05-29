@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/snelling-a/base16.nvim/compare/v2.2.0...v2.3.0) (2023-05-29)
+
+
+### Features
+
+* git highlighting ([676b423](https://github.com/snelling-a/base16.nvim/commit/676b423deab9b39fd3586842569d142128a714f7))
+
 ## [2.2.0](https://github.com/snelling-a/base16.nvim/compare/v2.1.0...v2.2.0) (2023-05-29)
 
 
