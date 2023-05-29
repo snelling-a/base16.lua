@@ -5,20 +5,25 @@
 -- https://color.adobe.com/create/color-wheel
 -- http://vrl.cs.brown.edu/color
 
-local M = {}
+---@class Colorscheme
+---@field base00 string -- Default Background
+---@field base01 string -- Lighter Background (Used for status bars, line number and folding marks)
+---@field base02 string -- Selection Background
+---@field base03 string -- Comments, Invisibles, Line Highlighting
+---@field base04 string -- Dark Foreground (Used for status bars)
+---@field base05 string -- Default Foreground, Caret, Delimiters, Operators
+---@field base06 string -- Light Foreground (Not often used)
+---@field base07 string -- Light Background (Not often used)
+---@field base08 string -- Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+---@field base09 string -- Integers, Boolean, Constants, XML Attributes, Markup Link Url
+---@field base0A string -- Classes, Markup Bold, Search Text Background
+---@field base0B string -- Strings, Inherited Class, Markup Code, Diff Inserted
+---@field base0C string -- Support, Regular Expressions, Escape Characters, Markup Quotes
+---@field base0D string -- Functions, Methods, Attribute IDs, Headings
+---@field base0E string -- Keywords, Storage, Selector, Markup Italic, Diff Changed
+---@field base0F string -- Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
 
-function M.with_config(config)
-	M.config = vim.tbl_extend("force", {
-		telescope = true,
-		indentblankline = true,
-		notify = true,
-		ts_rainbow = true,
-		cmp = true,
-		illuminate = true,
-		lsp_semantic = true,
-		mini_completion = true,
-	}, config or M.config or {})
-end
+local M = {}
 
 --- Creates a base16 colorscheme using the colors specified.
 --
@@ -33,41 +38,15 @@ end
 -- that here since these should instead be linked to an existing highlight
 -- group.
 --
-function M._load(colors, config)
-	M.with_config(config)
+-- 'base00', 'base01', 'base02', 'base03', 'base04', 'base05', 'base06', 'base07',
+-- 'base08', 'base09', 'base0A', 'base0B', 'base0C', 'base0D', 'base0E', 'base0F'.
+-- Each key should map to a valid 6 digit hex color.
+---@param colors Colorscheme
+function M.load(colors)
 
 	local Highlights = {}
 
-	-- Standard syntax Highlights
-	Highlights.Boolean = { fg = colors.base09 }
-	Highlights.Character = { fg = colors.base08 }
-	Highlights.Comment = { fg = colors.base03 }
-	Highlights.Conditional = { fg = colors.base0E }
-	Highlights.Constant = { fg = colors.base09 }
-	Highlights.Define = { fg = colors.base0E }
-	Highlights.Delimiter = { fg = colors.base0F }
-	Highlights.Float = { fg = colors.base09 }
-	Highlights.Function = { fg = colors.base0D }
-	Highlights.Identifier = { fg = colors.base08 }
-	Highlights.Include = { fg = colors.base0D }
-	Highlights.Keyword = { fg = colors.base0E }
-	Highlights.Label = { fg = colors.base0A }
-	Highlights.Number = { fg = colors.base09 }
-	Highlights.Operator = { fg = colors.base05 }
-	Highlights.PreProc = { fg = colors.base0A }
-	Highlights.Repeat = { fg = colors.base0A }
-	Highlights.Special = { fg = colors.base0C }
-	Highlights.SpecialChar = { fg = colors.base0F }
-	Highlights.Statement = { fg = colors.base08 }
-	Highlights.StorageClass = { fg = colors.base0A }
-	Highlights.String = { fg = colors.base0B }
-	Highlights.Structure = { fg = colors.base0E }
-	Highlights.Tag = { fg = colors.base0A }
-	Highlights.Todo = { fg = colors.base0A, bg = colors.base01 }
-	Highlights.Type = { fg = colors.base0A }
-	Highlights.Typedef = { fg = colors.base0A }
-
-	-- Vim editor colors {{
+	-- Vim editor colors {{{
 	Highlights.Bold = { bold = true }
 	Highlights.ColorColumn = { link = "CursorLine" }
 	Highlights.Conceal = { fg = colors.base0D }
@@ -121,7 +100,37 @@ function M._load(colors, config)
 	Highlights.NvimInternalError = { fg = colors.base00, bg = colors.base08 }
 	-- }}}
 
-	-- Diff Highlighting
+	-- Standard syntax highlighting {{{
+	Highlights.Boolean = { fg = colors.base09 }
+	Highlights.Character = { fg = colors.base08 }
+	Highlights.Comment = { fg = colors.base03 }
+	Highlights.Conditional = { fg = colors.base0E }
+	Highlights.Constant = { fg = colors.base09 }
+	Highlights.Define = { fg = colors.base0E }
+	Highlights.Delimiter = { fg = colors.base0F }
+	Highlights.Float = { fg = colors.base09 }
+	Highlights.Function = { fg = colors.base0D }
+	Highlights.Identifier = { fg = colors.base08 }
+	Highlights.Include = { fg = colors.base0D }
+	Highlights.Keyword = { fg = colors.base0E }
+	Highlights.Label = { fg = colors.base0A }
+	Highlights.Number = { fg = colors.base09 }
+	Highlights.Operator = { fg = colors.base05 }
+	Highlights.PreProc = { fg = colors.base0A }
+	Highlights.Repeat = { fg = colors.base0A }
+	Highlights.Special = { fg = colors.base0C }
+	Highlights.SpecialChar = { fg = colors.base0F }
+	Highlights.Statement = { fg = colors.base08 }
+	Highlights.StorageClass = { fg = colors.base0A }
+	Highlights.String = { fg = colors.base0B }
+	Highlights.Structure = { fg = colors.base0E }
+	Highlights.Tag = { fg = colors.base0A }
+	Highlights.Todo = { fg = colors.base0A }
+	Highlights.Type = { fg = colors.base0A }
+	Highlights.Typedef = { fg = colors.base0A }
+	-- }}}
+
+	-- Diff highlighting {{{
 	Highlights.DiffAdd = { fg = colors.base0B, bg = colors.base00 }
 	Highlights.DiffChange = { fg = colors.base03, bg = colors.base00 }
 	Highlights.DiffDelete = { fg = colors.base08, bg = colors.base00 }
@@ -131,6 +140,7 @@ function M._load(colors, config)
 	Highlights.DiffNewFile = { fg = colors.base0B, bg = colors.base00 }
 	Highlights.DiffLine = { fg = colors.base0D, bg = colors.base00 }
 	Highlights.DiffRemoved = { fg = colors.base08, bg = colors.base00 }
+	-- }}}
 
 	-- Git Highlighting
 	Highlights.gitcommitOverflow = { fg = colors.base08 }

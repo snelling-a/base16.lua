@@ -9,10 +9,7 @@ setmetatable(M.colorschemes, {
 	end,
 })
 
----@alias Colors table<string, string>|string
----@param colors Colors
-function M.colorscheme(colors) require("base16.theme")._load(colors) end
-
+---@param colors Colorscheme|string
 function M.setup(colors)
 	if vim.g.colors_name then
 		vim.cmd.hi("clear")
@@ -32,7 +29,7 @@ function M.setup(colors)
 
 	M.colors = colors or M.colorschemes[vim.env.BASE16_THEME]
 
-	M.colorscheme(colors)
+	require("base16.theme").load(colors)
 end
 
 return M
