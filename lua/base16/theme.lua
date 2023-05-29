@@ -131,39 +131,35 @@ function M.load(colors)
 	-- }}}
 
 	-- Diff highlighting {{{
-	Highlights.DiffAdd = { fg = colors.base0B, bg = colors.base00 }
-	Highlights.DiffChange = { fg = colors.base03, bg = colors.base00 }
-	Highlights.DiffDelete = { fg = colors.base08, bg = colors.base00 }
-	Highlights.DiffText = { fg = colors.base0D, bg = colors.base00 }
-	Highlights.DiffAdded = { fg = colors.base0B, bg = colors.base00 }
-	Highlights.DiffFile = { fg = colors.base08, bg = colors.base00 }
-	Highlights.DiffNewFile = { fg = colors.base0B, bg = colors.base00 }
-	Highlights.DiffLine = { fg = colors.base0D, bg = colors.base00 }
-	Highlights.DiffRemoved = { fg = colors.base08, bg = colors.base00 }
+	Highlights.DiffAdd = { fg = colors.base0B }
+	Highlights.DiffChange = { fg = colors.base0E }
+	Highlights.DiffDelete = { fg = colors.base08 }
+	Highlights.DiffText = { fg = colors.base0D }
+	Highlights.DiffAdded = { fg = colors.base0B }
+	Highlights.DiffFile = { fg = colors.base08 }
+	Highlights.DiffNewFile = { fg = colors.base0B }
+	Highlights.DiffLine = { fg = colors.base0E }
+	Highlights.DiffRemoved = { fg = colors.base08 }
 	-- }}}
 
-	-- Git Highlighting
-	Highlights.gitcommitOverflow = { fg = colors.base08 }
+	-- Git commit highlighting {{{
+	Highlights.gitcommitOverflow = { link = "ErrorMsg" }
 	Highlights.gitcommitSummary = { fg = colors.base0B }
 	Highlights.gitcommitComment = { fg = colors.base03 }
-	Highlights.gitcommitUntracked = { fg = colors.base03 }
-	Highlights.gitcommitDiscarded = { fg = colors.base03 }
-	Highlights.gitcommitSelected = { fg = colors.base03 }
-	Highlights.gitcommitHeader = { fg = colors.base0E }
+	Highlights.gitcommitUntracked = { link = "NonText" }
+	Highlights.gitcommitDiscarded = { fg = colors.base08 }
+	Highlights.gitcommitSelected = { fg = colors.base02 }
+	Highlights.gitcommitHeader = { link = "Title" }
 	Highlights.gitcommitSelectedType = { fg = colors.base0D }
 	Highlights.gitcommitUnmergedType = { fg = colors.base0D }
 	Highlights.gitcommitDiscardedType = { fg = colors.base0D }
-	Highlights.gitcommitBranch = { fg = colors.base09 }
-	Highlights.gitcommitUntrackedFile = { fg = colors.base0A }
-	Highlights.gitcommitUnmergedFile = { fg = colors.base08 }
-	Highlights.gitcommitDiscardedFile = { fg = colors.base08 }
-	Highlights.gitcommitSelectedFile = { fg = colors.base0B }
+	Highlights.gitcommitBranch = { fg = colors.base0E, bold = true }
+	Highlights.gitcommitUntrackedFile = { fg = colors.base03 }
+	Highlights.gitcommitUnmergedFile = { fg = colors.base08, bold = true }
+	Highlights.gitcommitDiscardedFile = { fg = colors.base08, bold = true }
+	Highlights.gitcommitSelectedFile = { fg = colors.base0B, bold = true }
+	-- }}}
 
-	-- GitGutter Highlighting
-	Highlights.GitGutterAdd = { fg = colors.base0B, bg = colors.base00 }
-	Highlights.GitGutterChange = { fg = colors.base0D, bg = colors.base00 }
-	Highlights.GitGutterDelete = { fg = colors.base08, bg = colors.base00 }
-	Highlights.GitGutterChangeDelete = { fg = colors.base0E, bg = colors.base00 }
 
 	-- Spelling Highlighting
 	Highlights.SpellBad = { sp = colors.base08 }
