@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/snelling-a/base16.nvim/compare/v2.0.0...v2.1.0) (2023-05-29)
+
+
+### Features
+
+* **telescope:** remove hiding border logic ([365076d](https://github.com/snelling-a/base16.nvim/commit/365076da71fd4e0052128511e31c524f73aea107))
+
 ## [2.0.0](https://github.com/snelling-a/base16.nvim/compare/v1.0.0...v2.0.0) (2023-05-25)
 
 
