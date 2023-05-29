@@ -22,7 +22,7 @@ if timer then
 	)
 end
 
-local augroup = vim.api.nvim_create_augroup(augroup, { clear = true })
+local augroup = vim.api.nvim_create_augroup("TestRun", { clear = true })
 vim.api.nvim_create_autocmd({ "VimLeave" }, {
 	group = augroup,
 	callback = function() timer:close() end,
