@@ -1,3 +1,4 @@
+-- vim:foldmethod=marker
 -- Some useful links for making your own colorscheme:
 -- https://github.com/chriskempson/base16
 -- https://colourco.de/
@@ -23,7 +24,7 @@ end
 --
 -- Builtin colorschemes can be found in the M.colorschemes table.
 --
--- The default Vim highlight groups (including User), highlight groups
+-- The default Vim highlight groups (including User[1-9]), highlight groups
 -- pertaining to Neovim's builtin LSP, and highlight groups pertaining to
 -- Treesitter will be defined.
 --
@@ -32,63 +33,10 @@ end
 -- that here since these should instead be linked to an existing highlight
 -- group.
 --
--- @param colors (table) table with keys 'base00', 'base01', 'base02',
---   'base03', 'base04', 'base05', 'base06', 'base07', 'base08', 'base09',
---   'base0A', 'base0B', 'base0C', 'base0D', 'base0E', 'base0F'. Each key should
---   map to a valid 6 digit hex color. If a string is provided, the
---   corresponding table specifying the colorscheme will be used.
 function M._load(colors, config)
 	M.with_config(config)
 
 	local Highlights = {}
-
-	-- Vim editor colors
-	Highlights.Normal = { fg = colors.base05, bg = colors.base00 }
-	Highlights.Bold = {}
-	Highlights.Debug = { fg = colors.base08 }
-	Highlights.Directory = { fg = colors.base0D }
-	Highlights.Error = { fg = colors.base08, bg = colors.base00 }
-	Highlights.ErrorMsg = { fg = colors.base08, bg = colors.base00 }
-	Highlights.Exception = { fg = colors.base08 }
-	Highlights.FoldColumn = { fg = colors.base0C, bg = colors.base00 }
-	Highlights.Folded = { fg = colors.base03, bg = colors.base01 }
-	Highlights.IncSearch = { fg = colors.base01, bg = colors.base09 }
-	Highlights.Italic = {}
-	Highlights.Macro = { fg = colors.base08 }
-	Highlights.MatchParen = { bg = colors.base03 }
-	Highlights.ModeMsg = { fg = colors.base0B }
-	Highlights.MoreMsg = { fg = colors.base0B }
-	Highlights.Question = { fg = colors.base0D }
-	Highlights.Search = { fg = colors.base01, bg = colors.base0A }
-	Highlights.Substitute = { fg = colors.base01, bg = colors.base0A }
-	Highlights.SpecialKey = { fg = colors.base03 }
-	Highlights.TooLong = { fg = colors.base08 }
-	Highlights.Underlined = { fg = colors.base08 }
-	Highlights.Visual = { bg = colors.base02 }
-	Highlights.VisualNOS = { fg = colors.base08 }
-	Highlights.WarningMsg = { fg = colors.base08 }
-	Highlights.WildMenu = { fg = colors.base08, bg = colors.base0A }
-	Highlights.Title = { fg = colors.base0D }
-	Highlights.Conceal = { fg = colors.base0D, bg = colors.base00 }
-	Highlights.Cursor = { fg = colors.base00, bg = colors.base05 }
-	Highlights.NonText = { fg = colors.base03 }
-	Highlights.LineNr = { fg = colors.base04, bg = colors.base00 }
-	Highlights.SignColumn = { fg = colors.base04, bg = colors.base00 }
-	Highlights.StatusLine = { fg = colors.base05, bg = colors.base02 }
-	Highlights.StatusLineNC = { fg = colors.base04, bg = colors.base01 }
-	Highlights.WinBar = { fg = colors.base05 }
-	Highlights.WinBarNC = { fg = colors.base04 }
-	Highlights.VertSplit = { fg = colors.base05, bg = colors.base00 }
-	Highlights.ColorColumn = { bg = colors.base01 }
-	Highlights.CursorColumn = { bg = colors.base01 }
-	Highlights.CursorLine = { bg = colors.base01 }
-	Highlights.CursorLineNr = { fg = colors.base04, bg = colors.base01 }
-	Highlights.QuickFixLine = { bg = colors.base01 }
-	Highlights.PMenu = { fg = colors.base05, bg = colors.base01 }
-	Highlights.PMenuSel = { fg = colors.base01, bg = colors.base05 }
-	Highlights.TabLine = { fg = colors.base03, bg = colors.base01 }
-	Highlights.TabLineFill = { fg = colors.base03, bg = colors.base01 }
-	Highlights.TabLineSel = { fg = colors.base0B, bg = colors.base01 }
 
 	-- Standard syntax Highlights
 	Highlights.Boolean = { fg = colors.base09 }
@@ -118,6 +66,60 @@ function M._load(colors, config)
 	Highlights.Todo = { fg = colors.base0A, bg = colors.base01 }
 	Highlights.Type = { fg = colors.base0A }
 	Highlights.Typedef = { fg = colors.base0A }
+
+	-- Vim editor colors {{
+	Highlights.Bold = { bold = true }
+	Highlights.ColorColumn = { link = "CursorLine" }
+	Highlights.Conceal = { fg = colors.base0D }
+	Highlights.Cursor = { fg = colors.base00, bg = colors.base05 }
+	Highlights.CursorColumn = { link = "CursorLine" }
+	Highlights.CursorLine = { bg = colors.base01 }
+	Highlights.CursorLineNr = { fg = colors.base04, bg = colors.base01 }
+	Highlights.Debug = { fg = colors.base08 }
+	Highlights.Directory = { fg = colors.base0D }
+	Highlights.Error = { fg = colors.base00, bg = colors.base08 }
+	Highlights.ErrorMsg = { fg = colors.base08 }
+	Highlights.Exception = { fg = colors.base08 }
+	Highlights.FoldColumn = { fg = colors.base0C }
+	Highlights.Folded = { fg = colors.base03, bg = colors.base01 }
+	Highlights.IncSearch = { fg = colors.base01, bg = colors.base09 }
+	Highlights.Italic = { italic = true }
+	Highlights.LineNr = { fg = colors.base04 }
+	Highlights.Macro = { fg = colors.base08 }
+	Highlights.MatchParen = { bg = colors.base03 }
+	Highlights.ModeMsg = { fg = colors.base0B }
+	Highlights.NonText = { fg = colors.base03 }
+	Highlights.Normal = { fg = colors.base05, bg = colors.base00 }
+	Highlights.PMenu = { fg = colors.base05, bg = colors.base01 }
+	Highlights.PMenuSel = { fg = colors.base01, bg = colors.base05 }
+	Highlights.Question = { fg = colors.base0D }
+	Highlights.QuickFixLine = { link = "CursorLine" }
+	-- Highlights.Search = { fg = colors.base01, bg = colors.base0A }
+	Highlights.Search = { reverse = true }
+	Highlights.SignColumn = { fg = colors.base04 }
+	Highlights.SpecialKey = { fg = colors.base03 }
+	Highlights.StatusLine = { fg = colors.base05, bg = colors.base02 }
+	Highlights.StatusLineNC = { fg = colors.base04 }
+	Highlights.Substitute = { fg = colors.base01, bg = colors.base0A }
+	Highlights.TabLine = { link = "StatusLineNC" }
+	Highlights.TabLineFill = { link = "StatusLine" }
+	Highlights.TabLineSel = { fg = colors.base0B, bg = colors.base02 }
+	Highlights.TermCursor = { fg = colors.base00, bg = colors.base05 }
+	Highlights.TermCursorNC = { fg = colors.base00, bg = colors.base05 }
+	Highlights.Title = { fg = colors.base0D }
+	Highlights.TooLong = { fg = colors.base08 }
+	Highlights.Underlined = { fg = colors.base08 }
+	Highlights.VertSplit = { fg = colors.base05 }
+	Highlights.Visual = { bg = colors.base02 }
+	Highlights.VisualNOS = { fg = colors.base08 }
+	Highlights.WarningMsg = { fg = colors.base08 }
+	Highlights.WildMenu = { fg = colors.base08, bg = colors.base0A }
+	Highlights.WinBar = { fg = colors.base05, bg = colors.base01 }
+	Highlights.WinBarNC = { fg = colors.base04 }
+	-- Command-line expressions highlighting
+	-- all other highlight groups have default links :h |expr-highlight|
+	Highlights.NvimInternalError = { fg = colors.base00, bg = colors.base08 }
+	-- }}}
 
 	-- Diff Highlighting
 	Highlights.DiffAdd = { fg = colors.base0B, bg = colors.base00 }
