@@ -168,26 +168,17 @@ function M.load(colors)
 	-- }}}
 
 	-- Diagnostics {{{
+	Highlights.DiagnosticUnderlineOk = { undercurl = true, sp = colors.base0B }
 	Highlights.DiagnosticError = { fg = colors.base08 }
-	Highlights.DiagnosticWarn = { fg = colors.base0E }
-	Highlights.DiagnosticInfo = { fg = colors.base05 }
 	Highlights.DiagnosticHint = { fg = colors.base0C }
-	Highlights.LspReferenceText = { sp = colors.base04 }
-	Highlights.LspReferenceRead = { sp = colors.base04 }
-	Highlights.LspReferenceWrite = { sp = colors.base04 }
-	Highlights.LspDiagnosticsDefaultError = "DiagnosticError"
-	Highlights.LspDiagnosticsDefaultWarning = "DiagnosticWarn"
-	Highlights.LspDiagnosticsDefaultInformation = "DiagnosticInfo"
-	Highlights.LspDiagnosticsDefaultHint = "DiagnosticHint"
-	Highlights.LspDiagnosticsUnderlineError = "DiagnosticUnderlineError"
-	Highlights.LspDiagnosticsUnderlineWarning = "DiagnosticUnderlineWarning"
-	Highlights.LspDiagnosticsUnderlineInformation = "DiagnosticUnderlineInformation"
-	Highlights.LspDiagnosticsUnderlineHint = "DiagnosticUnderlineHint"
+	Highlights.DiagnosticInfo = { fg = colors.base05 }
+	Highlights.DiagnosticOk = { fg = colors.base0B }
 	Highlights.DiagnosticUnderlineError = { undercurl = true, sp = colors.base08 }
-	Highlights.DiagnosticUnderlineWarning = { undercurl = true, sp = colors.base0E }
-	Highlights.DiagnosticUnderlineWarn = { undercurl = true, sp = colors.base0E }
-	Highlights.DiagnosticUnderlineInformation = { undercurl = true, sp = colors.base0F }
 	Highlights.DiagnosticUnderlineHint = { undercurl = true, sp = colors.base0C }
+	Highlights.DiagnosticUnderlineInfo = { undercurl = true, sp = colors.base05 }
+	Highlights.DiagnosticUnderlineWarn = { undercurl = true, sp = colors.base0E }
+	Highlights.DiagnosticUnderlineWarning = { undercurl = true, sp = colors.base0E }
+	Highlights.DiagnosticWarn = { fg = colors.base0E }
 	-- }}}
 
 	Highlights.TSAnnotation = { fg = colors.base0F }
