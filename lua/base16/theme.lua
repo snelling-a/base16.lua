@@ -43,7 +43,6 @@ local M = {}
 -- Each key should map to a valid 6 digit hex color.
 ---@param colors Colorscheme
 function M.load(colors)
-
 	local Highlights = {}
 
 	-- Vim editor colors {{{
@@ -214,138 +213,135 @@ function M.load(colors)
 	Highlights["@lsp.type.variable"] = { link = "@variable", default = true }
 	-- }}}
 
+	-- Treesitter {{{
 	Highlights.TSAnnotation = { fg = colors.base0F }
 	Highlights.TSAttribute = { fg = colors.base0A }
-	Highlights.TSBoolean = { fg = colors.base09 }
-	Highlights.TSCharacter = { fg = colors.base08 }
-	Highlights.TSComment = { fg = colors.base03 }
-	Highlights.TSConstructor = { fg = colors.base0D }
-	Highlights.TSConditional = { fg = colors.base0E }
-	Highlights.TSConstant = { fg = colors.base09 }
-	Highlights.TSConstBuiltin = { fg = colors.base09 }
+	Highlights.TSBoolean = { link = "Boolean" }
+	Highlights.TSCharacter = { link = "Character" }
+	Highlights.TSComment = { fg = colors.base03, italic = true }
+	Highlights.TSConditional = { link = "Conditional" }
+	Highlights.TSConstant = { link = "Constant" }
+	Highlights.TSConstBuiltin = { fg = colors.base09, italic = true }
 	Highlights.TSConstMacro = { fg = colors.base08 }
-	Highlights.TSError = { fg = colors.base08 }
-	Highlights.TSException = { fg = colors.base08 }
+	Highlights.TSConstructor = { fg = colors.base0D }
+	Highlights.TSCurrentScope = { bold = true }
+	Highlights.TSDefinition = { underline = true, sp = colors.base04 }
+	Highlights.TSDefinitionUsage = { underline = true, sp = colors.base04 }
+	Highlights.TSEmphasis = { fg = colors.base09, italic = true }
+	Highlights.TSError = { link = "ErrorMsg" }
+	Highlights.TSException = { link = "Exception" }
 	Highlights.TSField = { fg = colors.base05 }
-	Highlights.TSFloat = { fg = colors.base09 }
-	Highlights.TSFunction = { fg = colors.base0D }
-	Highlights.TSFuncBuiltin = { fg = colors.base0D }
+	Highlights.TSFloat = { link = "Float" }
+	Highlights.TSFuncBuiltin = { fg = colors.base0D, italic = true }
 	Highlights.TSFuncMacro = { fg = colors.base08 }
-	Highlights.TSInclude = { fg = colors.base0D }
-	Highlights.TSKeyword = { fg = colors.base0E }
+	Highlights.TSFunction = { link = "Function" }
+	Highlights.TSInclude = { link = "Include" }
+	Highlights.TSKeyword = { link = "Keyword" }
 	Highlights.TSKeywordFunction = { fg = colors.base0E }
 	Highlights.TSKeywordOperator = { fg = colors.base0E }
-	Highlights.TSLabel = { fg = colors.base0A }
+	Highlights.TSLabel = { link = "Label" }
+	Highlights.TSLiteral = { fg = colors.base09 }
 	Highlights.TSMethod = { fg = colors.base0D }
 	Highlights.TSNamespace = { fg = colors.base08 }
-	Highlights.TSNone = { fg = colors.base05 }
-	Highlights.TSNumber = { fg = colors.base09 }
-	Highlights.TSOperator = { fg = colors.base05 }
+	Highlights.TSNone = { link = "NonText" }
+	Highlights.TSNumber = { link = "Number" }
+	Highlights.TSOperator = { link = "Operator" }
 	Highlights.TSParameter = { fg = colors.base05 }
 	Highlights.TSParameterReference = { fg = colors.base05 }
 	Highlights.TSProperty = { fg = colors.base05 }
-	Highlights.TSPunctDelimiter = { fg = colors.base0F }
 	Highlights.TSPunctBracket = { fg = colors.base05 }
+	Highlights.TSPunctDelimiter = { fg = colors.base0F }
 	Highlights.TSPunctSpecial = { fg = colors.base05 }
-	Highlights.TSRepeat = { fg = colors.base0E }
+	Highlights.TSRepeat = { link = "Repeat" }
+	Highlights.TSStrike = { fg = colors.base03, strikethrough = true }
 	Highlights.TSString = { fg = colors.base0B }
-	Highlights.TSStringRegex = { fg = colors.base0C }
 	Highlights.TSStringEscape = { fg = colors.base0C }
+	Highlights.TSStringRegex = { fg = colors.base0C }
+	Highlights.TSStrong = { link = "Bold" }
 	Highlights.TSSymbol = { fg = colors.base0B }
-	Highlights.TSTag = { fg = colors.base08 }
+	Highlights.TSTag = { link = "Tag" }
 	Highlights.TSTagDelimiter = { fg = colors.base0F }
 	Highlights.TSText = { fg = colors.base05 }
-	Highlights.TSStrong = {}
-	Highlights.TSEmphasis = { fg = colors.base09 }
-	Highlights.TSUnderline = { fg = colors.base00 }
-	Highlights.TSStrike = { fg = colors.base00 }
-	Highlights.TSTitle = { fg = colors.base0D }
-	Highlights.TSLiteral = { fg = colors.base09 }
-	Highlights.TSURI = { fg = colors.base09 }
-	Highlights.TSType = { fg = colors.base0A }
-	Highlights.TSTypeBuiltin = { fg = colors.base0A }
+	Highlights.TSTitle = { link = "Title" }
+	Highlights.TSType = { link = "Type" }
+	Highlights.TSTypeBuiltin = { fg = colors.base0A, italic = true }
+	Highlights.TSUnderline = { fg = colors.base03, sp = colors.base03, underline = true }
+	Highlights.TSURI = { fg = colors.base09, underline = true }
 	Highlights.TSVariable = { fg = colors.base08 }
-	Highlights.TSVariableBuiltin = { fg = colors.base08 }
-
-	Highlights.TSDefinition = { sp = colors.base04 }
-	Highlights.TSDefinitionUsage = { sp = colors.base04 }
-	Highlights.TSCurrentScope = {}
-
-
-	if vim.fn.has("nvim-0.8.0") then
-		Highlights["@comment"] = "TSComment"
-		Highlights["@error"] = "TSError"
-		Highlights["@none"] = "TSNone"
-		Highlights["@preproc"] = "PreProc"
-		Highlights["@define"] = "Define"
-		Highlights["@operator"] = "TSOperator"
-		Highlights["@punctuation.delimiter"] = "TSPunctDelimiter"
-		Highlights["@punctuation.bracket"] = "TSPunctBracket"
-		Highlights["@punctuation.special"] = "TSPunctSpecial"
-		Highlights["@string"] = "TSString"
-		Highlights["@string.regex"] = "TSStringRegex"
-		Highlights["@string.escape"] = "TSStringEscape"
-		Highlights["@string.special"] = "SpecialChar"
-		Highlights["@character"] = "TSCharacter"
-		Highlights["@character.special"] = "SpecialChar"
-		Highlights["@boolean"] = "TSBoolean"
-		Highlights["@number"] = "TSNumber"
-		Highlights["@float"] = "TSFloat"
-		Highlights["@function"] = "TSFunction"
-		Highlights["@function.call"] = "TSFunction"
-		Highlights["@function.builtin"] = "TSFuncBuiltin"
-		Highlights["@function.macro"] = "TSFuncMacro"
-		Highlights["@method"] = "TSMethod"
-		Highlights["@method.call"] = "TSMethod"
-		Highlights["@constructor"] = "TSConstructor"
-		Highlights["@parameter"] = "TSParameter"
-		Highlights["@keyword"] = "TSKeyword"
-		Highlights["@keyword.function"] = "TSKeywordFunction"
-		Highlights["@keyword.operator"] = "TSKeywordOperator"
-		Highlights["@keyword.return"] = "TSKeyword"
-		Highlights["@conditional"] = "TSConditional"
-		Highlights["@repeat"] = "TSRepeat"
-		Highlights["@debug"] = "Debug"
-		Highlights["@label"] = "TSLabel"
-		Highlights["@include"] = "TSInclude"
-		Highlights["@exception"] = "TSException"
-		Highlights["@type"] = "TSType"
-		Highlights["@type.builtin"] = "TSTypeBuiltin"
-		Highlights["@type.qualifier"] = "TSKeyword"
-		Highlights["@type.definition"] = "TSType"
-		Highlights["@storageclass"] = "StorageClass"
-		Highlights["@attribute"] = "TSAttribute"
-		Highlights["@field"] = "TSField"
-		Highlights["@property"] = "TSProperty"
-		Highlights["@variable"] = "TSVariable"
-		Highlights["@variable.builtin"] = "TSVariableBuiltin"
-		Highlights["@constant"] = "TSConstant"
-		Highlights["@constant.builtin"] = "TSConstant"
-		Highlights["@constant.macro"] = "TSConstant"
-		Highlights["@namespace"] = "TSNamespace"
-		Highlights["@symbol"] = "TSSymbol"
-		Highlights["@text"] = "TSText"
-		Highlights["@text.diff.add"] = "DiffAdd"
-		Highlights["@text.diff.delete"] = "DiffDelete"
-		Highlights["@text.strong"] = "TSStrong"
-		Highlights["@text.emphasis"] = "TSEmphasis"
-		Highlights["@text.underline"] = "TSUnderline"
-		Highlights["@text.strike"] = "TSStrike"
-		Highlights["@text.title"] = "TSTitle"
-		Highlights["@text.literal"] = "TSLiteral"
-		Highlights["@text.uri"] = "TSUri"
-		Highlights["@text.math"] = "Number"
-		Highlights["@text.environment"] = "Macro"
-		Highlights["@text.environment.name"] = "Type"
-		Highlights["@text.reference"] = "TSParameterReference"
-		Highlights["@text.todo"] = "Todo"
-		Highlights["@text.note"] = "Tag"
-		Highlights["@text.warning"] = "DiagnosticWarn"
-		Highlights["@text.danger"] = "DiagnosticError"
-		Highlights["@tag"] = "TSTag"
-		Highlights["@tag.attribute"] = "TSAttribute"
-		Highlights["@tag.delimiter"] = "TSTagDelimiter"
-	end
+	Highlights.TSVariableBuiltin = { fg = colors.base08, italic = true }
+	Highlights["@attribute"] = { link = "TSAttribute" }
+	Highlights["@boolean"] = { link = "TSBoolean" }
+	Highlights["@character"] = { link = "TSCharacter" }
+	Highlights["@character.special"] = { link = "SpecialChar" }
+	Highlights["@comment"] = { link = "TSComment" }
+	Highlights["@conditional"] = { link = "TSConditional" }
+	Highlights["@constant"] = { link = "TSConstant" }
+	Highlights["@constant.builtin"] = { link = "TSConstant" }
+	Highlights["@constant.macro"] = { link = "TSConstant" }
+	Highlights["@constructor"] = { link = "TSConstructor" }
+	Highlights["@debug"] = { link = "Debug" }
+	Highlights["@define"] = { link = "Define" }
+	Highlights["@error"] = { link = "TSError" }
+	Highlights["@exception"] = { link = "TSException" }
+	Highlights["@field"] = { link = "TSField" }
+	Highlights["@float"] = { link = "TSFloat" }
+	Highlights["@function"] = { link = "TSFunction" }
+	Highlights["@function.builtin"] = { link = "TSFuncBuiltin" }
+	Highlights["@function.call"] = { link = "TSFunction" }
+	Highlights["@function.macro"] = { link = "TSFuncMacro" }
+	Highlights["@include"] = { link = "TSInclude" }
+	Highlights["@keyword"] = { link = "TSKeyword" }
+	Highlights["@keyword.function"] = { link = "TSKeywordFunction" }
+	Highlights["@keyword.operator"] = { link = "TSKeywordOperator" }
+	Highlights["@keyword.return"] = { link = "TSKeyword" }
+	Highlights["@label"] = { link = "TSLabel" }
+	Highlights["@method"] = { link = "TSMethod" }
+	Highlights["@method.call"] = { link = "TSMethod" }
+	Highlights["@namespace"] = { link = "TSNamespace" }
+	Highlights["@none"] = { link = "TSNone" }
+	Highlights["@number"] = { link = "TSNumber" }
+	Highlights["@operator"] = { link = "TSOperator" }
+	Highlights["@parameter"] = { link = "TSParameter" }
+	Highlights["@preproc"] = { link = "PreProc" }
+	Highlights["@property"] = { link = "TSProperty" }
+	Highlights["@punctuation.bracket"] = { link = "TSPunctBracket" }
+	Highlights["@punctuation.delimiter"] = { link = "TSPunctDelimiter" }
+	Highlights["@punctuation.special"] = { link = "TSPunctSpecial" }
+	Highlights["@repeat"] = { link = "TSRepeat" }
+	Highlights["@storageclass"] = { link = "StorageClass" }
+	Highlights["@string"] = { link = "TSString" }
+	Highlights["@string.escape"] = { link = "TSStringEscape" }
+	Highlights["@string.regex"] = { link = "TSStringRegex" }
+	Highlights["@string.special"] = { link = "SpecialChar" }
+	Highlights["@symbol"] = { link = "TSSymbol" }
+	Highlights["@tag"] = { link = "TSTag" }
+	Highlights["@tag.attribute"] = { link = "TSAttribute" }
+	Highlights["@tag.delimiter"] = { link = "TSTagDelimiter" }
+	Highlights["@text"] = { link = "TSText" }
+	Highlights["@text.danger"] = { link = "DiagnosticError" }
+	Highlights["@text.diff.add"] = { link = "DiffAdd" }
+	Highlights["@text.diff.delete"] = { link = "DiffDelete" }
+	Highlights["@text.emphasis"] = { link = "TSEmphasis" }
+	Highlights["@text.environment"] = { link = "Macro" }
+	Highlights["@text.environment.name"] = { link = "Type" }
+	Highlights["@text.literal"] = { link = "TSLiteral" }
+	Highlights["@text.math"] = { link = "Number" }
+	Highlights["@text.note"] = { link = "Tag" }
+	Highlights["@text.reference"] = { link = "TSParameterReference" }
+	Highlights["@text.strike"] = { link = "TSStrike" }
+	Highlights["@text.strong"] = { link = "TSStrong" }
+	Highlights["@text.title"] = { link = "TSTitle" }
+	Highlights["@text.todo"] = { link = "Todo" }
+	Highlights["@text.underline"] = { link = "TSUnderline" }
+	Highlights["@text.uri"] = { link = "TSUri" }
+	Highlights["@text.warning"] = { link = "DiagnosticWarn" }
+	Highlights["@type"] = { link = "TSType" }
+	Highlights["@type.builtin"] = { link = "TSTypeBuiltin" }
+	Highlights["@type.definition"] = { link = "TSType" }
+	Highlights["@type.qualifier"] = { link = "TSType" }
+	Highlights["@variable"] = { link = "TSVariable" }
+	Highlights["@variable.builtin"] = { link = "TSVariableBuiltin" }
+	-- }}}
 
 	if M.config.ts_rainbow then
 		Highlights.rainbowcol1 = { fg = colors.base06 }
@@ -448,9 +444,6 @@ function M.load(colors)
 		Highlights.CmpItemKindOperator = { fg = colors.base05 }
 		Highlights.CmpItemKindSnippet = { fg = colors.base04 }
 	end
-
-
-
 
 	if M.config.mini_completion then
 		Highlights.MiniCompletionActiveParameter = "CursorLine"
