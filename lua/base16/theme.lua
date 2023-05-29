@@ -181,6 +181,38 @@ function M.load(colors)
 	Highlights.DiagnosticWarn = { fg = colors.base0E }
 	-- }}}
 
+	-- LSP {{{
+	Highlights.LspCodeLens = { link = "TSComment" }
+	Highlights.LspCodeLensSeparator = { link = "TSComment" }
+	Highlights.LspDiagnosticsDefaultError = { link = "DiagnosticError" }
+	Highlights.LspDiagnosticsDefaultHint = { link = "DiagnosticHint" }
+	Highlights.LspDiagnosticsDefaultInformation = { link = "DiagnosticInfo" }
+	Highlights.LspDiagnosticsDefaultWarning = { link = "DiagnosticWarn" }
+	Highlights.LspDiagnosticsUnderlineError = { link = "DiagnosticUnderlineError" }
+	Highlights.LspDiagnosticsUnderlineHint = { link = "DiagnosticUnderlineHint" }
+	Highlights.LspDiagnosticsUnderlineInformation = { link = "DiagnosticUnderlineInformation" }
+	Highlights.LspDiagnosticsUnderlineWarning = { link = "DiagnosticUnderlineWarning" }
+	Highlights.LspInlayHint = { link = "TSComment" }
+	Highlights.LspReferenceRead = { bg = colors.base02, sp = colors.base02 }
+	Highlights.LspReferenceText = { bg = colors.base02, sp = colors.base02 }
+	Highlights.LspReferenceWrite = { bg = colors.base02, sp = colors.base02 }
+	Highlights.LspSignatureActiveParameter = { link = "TSComment" }
+	Highlights["@lsp.type.class"] = { link = "@type", default = true }
+	Highlights["@lsp.type.decorator"] = { link = "@function", default = true }
+	Highlights["@lsp.type.enum"] = { link = "@type", default = true }
+	Highlights["@lsp.type.enumMember"] = { link = "@constant", default = true }
+	Highlights["@lsp.type.function"] = { link = "@function", default = true }
+	Highlights["@lsp.type.interface"] = { link = "@type", default = true }
+	Highlights["@lsp.type.macro"] = { link = "@macro", default = true }
+	Highlights["@lsp.type.method"] = { link = "@method", default = true }
+	Highlights["@lsp.type.namespace"] = { link = "@namespace", default = true }
+	Highlights["@lsp.type.parameter"] = { link = "@parameter", default = true }
+	Highlights["@lsp.type.property"] = { link = "@property", default = true }
+	Highlights["@lsp.type.struct"] = { link = "@structure", default = true }
+	Highlights["@lsp.type.type"] = { link = "@type", default = true }
+	Highlights["@lsp.type.variable"] = { link = "@variable", default = true }
+	-- }}}
+
 	Highlights.TSAnnotation = { fg = colors.base0F }
 	Highlights.TSAttribute = { fg = colors.base0A }
 	Highlights.TSBoolean = { fg = colors.base09 }
@@ -238,7 +270,6 @@ function M.load(colors)
 	Highlights.TSDefinitionUsage = { sp = colors.base04 }
 	Highlights.TSCurrentScope = {}
 
-	Highlights.LspInlayHint = { fg = colors.base03 }
 
 	if vim.fn.has("nvim-0.8.0") then
 		Highlights["@comment"] = "TSComment"
@@ -417,40 +448,8 @@ function M.load(colors)
 		Highlights.CmpItemKindSnippet = { fg = colors.base04 }
 	end
 
-	if M.config.illuminate then
-		Highlights.IlluminatedWordText = { sp = colors.base04 }
-		Highlights.IlluminatedWordRead = { sp = colors.base04 }
-		Highlights.IlluminatedWordWrite = { sp = colors.base04 }
-	end
 
-	if M.config.lsp_semantic then
-		Highlights["@class"] = "TSType"
-		Highlights["@struct"] = "TSType"
-		Highlights["@enum"] = "TSType"
-		Highlights["@enumMember"] = "Constant"
-		Highlights["@event"] = "Identifier"
-		Highlights["@interface"] = "Structure"
-		Highlights["@modifier"] = "Identifier"
-		Highlights["@regexp"] = "TSStringRegex"
-		Highlights["@typeParameter"] = "Type"
-		Highlights["@decorator"] = "Identifier"
 
-		-- TODO: figure out what these should be
-		-- Highlights['@lsp.type.namespace'] = '@namespace'
-		-- Highlights['@lsp.type.type'] = '@type'
-		-- Highlights['@lsp.type.class'] = '@type'
-		-- Highlights['@lsp.type.enum'] = '@type'
-		-- Highlights['@lsp.type.interface'] = '@type'
-		-- Highlights['@lsp.type.struct'] = '@structure'
-		-- Highlights['@lsp.type.parameter'] = '@parameter'
-		-- Highlights['@lsp.type.variable'] = '@variable'
-		-- Highlights['@lsp.type.property'] = '@property'
-		-- Highlights['@lsp.type.enumMember'] = '@constant'
-		-- Highlights['@lsp.type.function'] = '@function'
-		-- Highlights['@lsp.type.method'] = '@method'
-		-- Highlights['@lsp.type.macro'] = '@macro'
-		-- Highlights['@lsp.type.decorator'] = '@function'
-	end
 
 	if M.config.mini_completion then
 		Highlights.MiniCompletionActiveParameter = "CursorLine"
