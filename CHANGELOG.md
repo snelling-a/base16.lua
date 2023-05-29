@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.1.0](https://github.com/snelling-a/base16.nvim/compare/v2.0.0...v2.1.0) (2023-05-29)
+
+
+### Features
+
+* **editor:** default vim highlight groups ([3a61991](https://github.com/snelling-a/base16.nvim/commit/3a61991146900d0beb61adbaa474255401a34941))
+* **telescope:** remove hiding border logic ([365076d](https://github.com/snelling-a/base16.nvim/commit/365076da71fd4e0052128511e31c524f73aea107))
+
+
+### Bug Fixes
+
+* **demo:** add augroup name to test_run ([ccb7533](https://github.com/snelling-a/base16.nvim/commit/ccb75331a75ed701105697d053be5959380a33fc))
+
+
+### Miscellaneous
+
+* **spell:** update cspell.json ([ee9c796](https://github.com/snelling-a/base16.nvim/commit/ee9c79666bc1b85aa853337e55d32cca506e7563))
+
 ## [2.0.0](https://github.com/snelling-a/base16.nvim/compare/v1.0.0...v2.0.0) (2023-05-25)
 
 
