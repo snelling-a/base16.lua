@@ -1,4 +1,4 @@
-*base16.nvim.txt*           For NVIM >v0.8.0          Last change: 2023 May 29
+*base16.nvim.txt*          For NVIM >v0.8.0          Last change: 2023 June 01
 
 ==============================================================================
 Table of Contents                              *base16.nvim-table-of-contents*
@@ -11,6 +11,8 @@ Table of Contents                              *base16.nvim-table-of-contents*
 
 Neovim plugin for building base16 colorschemes with support for Neovim’s
 builtin LSP and Treesitter.
+
+- vim-illuminate <https://github.com/RRethy/vim-illuminate> like reference highlighting
 
 
 https://user-images.githubusercontent.com/21000943/199322658-ecbf8113-fa4b-409b-a562-be4a100de844.mov
