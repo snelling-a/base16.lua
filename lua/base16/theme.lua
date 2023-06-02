@@ -343,24 +343,7 @@ function M.load(colors)
 	Highlights["@variable.builtin"] = { link = "TSVariableBuiltin" }
 	-- }}}
 
-	if M.config.ts_rainbow then
-		Highlights.rainbowcol1 = { fg = colors.base06 }
-		Highlights.rainbowcol2 = { fg = colors.base09 }
-		Highlights.rainbowcol3 = { fg = colors.base0A }
-		Highlights.rainbowcol4 = { fg = colors.base07 }
-		Highlights.rainbowcol5 = { fg = colors.base0C }
-		Highlights.rainbowcol6 = { fg = colors.base0D }
-		Highlights.rainbowcol7 = { fg = colors.base0E }
-	end
-
-	Highlights.NvimInternalError = { fg = colors.base00, bg = colors.base08 }
-
-	Highlights.NormalFloat = { fg = colors.base05, bg = colors.base00 }
-	Highlights.FloatBorder = { fg = colors.base05, bg = colors.base00 }
-	Highlights.NormalNC = { fg = colors.base05, bg = colors.base00 }
-	Highlights.TermCursor = { fg = colors.base00, bg = colors.base05 }
-	Highlights.TermCursorNC = { fg = colors.base00, bg = colors.base05 }
-
+	-- User {{{
 	Highlights.User1 = { fg = colors.base08, bg = colors.base02 }
 	Highlights.User2 = { fg = colors.base0E, bg = colors.base02 }
 	Highlights.User3 = { fg = colors.base05, bg = colors.base02 }
@@ -370,43 +353,24 @@ function M.load(colors)
 	Highlights.User7 = { fg = colors.base05, bg = colors.base02 }
 	Highlights.User8 = { fg = colors.base00, bg = colors.base02 }
 	Highlights.User9 = { fg = colors.base00, bg = colors.base02 }
+	-- }}}
 
-	Highlights.TreesitterContext = { bg = colors.base01 }
+	-- TSRainbow {{{
+	local rainbow_colors =
+		{ colors.base09, colors.base0A, colors.base0B, colors.base0C, colors.base0D, colors.base0E, colors.base0F }
 
-	if M.config.telescope then
-		Highlights.TelescopePromptBorder = { fg = colors.base05, bg = colors.base00 }
-		Highlights.TelescopePromptNormal = { fg = colors.base05, bg = colors.base00 }
-		Highlights.TelescopePromptPrefix = { fg = colors.base05, bg = colors.base00 }
-		Highlights.TelescopeNormal = { bg = colors.base00 }
-		Highlights.TelescopePreviewTitle = { fg = colors.base01, bg = colors.base0B }
-		Highlights.TelescopePromptTitle = { fg = colors.base01, bg = colors.base08 }
-		Highlights.TelescopeResultsTitle = { fg = colors.base05, bg = colors.base00 }
-		Highlights.TelescopeSelection = { bg = colors.base01 }
-		Highlights.TelescopePreviewLine = { bg = colors.base01 }
+	-- HiPhish/nvim-ts-rainbow2
+	-- NOTE: the base16 colors do not reflect the highlight group name
+	local rainbow2 = { "Red", "Yellow", "Blue", "Orange", "Green", "Violet", "Cyan" }
+	for index, value in ipairs(rainbow2) do
+		Highlights["TSRainbow" .. value] = { fg = rainbow_colors[index] }
 	end
 
-	if M.config.notify then
-		Highlights.NotifyERRORBorder = { fg = colors.base08 }
-		Highlights.NotifyWARNBorder = { fg = colors.base0E }
-		Highlights.NotifyINFOBorder = { fg = colors.base05 }
-		Highlights.NotifyDEBUGBorder = { fg = colors.base0C }
-		Highlights.NotifyTRACEBorder = { fg = colors.base0C }
-		Highlights.NotifyERRORIcon = { fg = colors.base08 }
-		Highlights.NotifyWARNIcon = { fg = colors.base0E }
-		Highlights.NotifyINFOIcon = { fg = colors.base05 }
-		Highlights.NotifyDEBUGIcon = { fg = colors.base0C }
-		Highlights.NotifyTRACEIcon = { fg = colors.base0C }
-		Highlights.NotifyERRORTitle = { fg = colors.base08 }
-		Highlights.NotifyWARNTitle = { fg = colors.base0E }
-		Highlights.NotifyINFOTitle = { fg = colors.base05 }
-		Highlights.NotifyDEBUGTitle = { fg = colors.base0C }
-		Highlights.NotifyTRACETitle = { fg = colors.base0C }
-		Highlights.NotifyERRORBody = "Normal"
-		Highlights.NotifyWARNBody = "Normal"
-		Highlights.NotifyINFOBody = "Normal"
-		Highlights.NotifyDEBUGBody = "Normal"
-		Highlights.NotifyTRACEBody = "Normal"
+	-- mrjones1024/ts-rainbow
+	for i = 1, #rainbow_colors, 1 do
+		Highlights["rainbowlcol" .. i] = { fg = rainbow_colors[1] }
 	end
+	-- }}}
 
 	if M.config.indentblankline then
 		Highlights.IndentBlanklineChar = { fg = colors.base02 }
