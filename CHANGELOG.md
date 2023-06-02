@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.6.0](https://github.com/snelling-a/base16.nvim/compare/v2.5.0...v2.6.0) (2023-06-01)
+
+
+### Features
+
+* DiagnosticsDeprecated ([ea3e1aa](https://github.com/snelling-a/base16.nvim/commit/ea3e1aa14c4e9728e05d3b46fcb477b31461ad01))
+* treesitter ([9108ddb](https://github.com/snelling-a/base16.nvim/commit/9108ddb8c938f0c6be1849f7079c8ada7ca0d70a))
+
 ## [2.5.0](https://github.com/snelling-a/base16.nvim/compare/v2.4.0...v2.5.0) (2023-05-29)
 
 
