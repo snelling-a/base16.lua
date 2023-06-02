@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0](https://github.com/snelling-a/base16.nvim/compare/v2.6.0...v2.7.0) (2023-06-02)
+
+
+### Features
+
+* ts-rainbow ([420e1b8](https://github.com/snelling-a/base16.nvim/commit/420e1b85a8528cf7a2e4d73afdbcd0a7775b0cc1))
+
 ## [2.6.0](https://github.com/snelling-a/base16.nvim/compare/v2.5.0...v2.6.0) (2023-06-01)
 
 
