@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.1](https://github.com/snelling-a/base16.nvim/compare/v2.7.0...v2.7.1) (2023-08-31)
+
+
+### Bug Fixes
+
+* remove references to config ([3321dda](https://github.com/snelling-a/base16.nvim/commit/3321dda9dd74b96e247423db17f6bcebc09f7232))
+
 ## [2.7.0](https://github.com/snelling-a/base16.nvim/compare/v2.6.0...v2.7.0) (2023-06-02)
 
 
