@@ -372,46 +372,40 @@ function M.load(colors)
 	end
 	-- }}}
 
-	if M.config.indentblankline then
-		Highlights.IndentBlanklineChar = { fg = colors.base02 }
-		Highlights.IndentBlanklineContextChar = { fg = colors.base04 }
-	end
+	Highlights.IndentBlanklineChar = { fg = colors.base02 }
+	Highlights.IndentBlanklineContextChar = { fg = colors.base04 }
 
-	if M.config.cmp then
-		Highlights.CmpDocumentationBorder = { fg = colors.base05, bg = colors.base00 }
-		Highlights.CmpDocumentation = { fg = colors.base05, bg = colors.base00 }
-		Highlights.CmpItemAbbr = { fg = colors.base05, bg = colors.base01 }
-		Highlights.CmpItemAbbrDeprecated = { fg = colors.base03 }
-		Highlights.CmpItemAbbrMatch = { fg = colors.base0D }
-		Highlights.CmpItemAbbrMatchFuzzy = { fg = colors.base0D }
-		Highlights.CmpItemKindDefault = { fg = colors.base05 }
-		Highlights.CmpItemMenu = { fg = colors.base04 }
-		Highlights.CmpItemKindKeyword = { fg = colors.base0E }
-		Highlights.CmpItemKindVariable = { fg = colors.base08 }
-		Highlights.CmpItemKindConstant = { fg = colors.base09 }
-		Highlights.CmpItemKindReference = { fg = colors.base08 }
-		Highlights.CmpItemKindValue = { fg = colors.base09 }
-		Highlights.CmpItemKindFunction = { fg = colors.base0D }
-		Highlights.CmpItemKindMethod = { fg = colors.base0D }
-		Highlights.CmpItemKindConstructor = { fg = colors.base0D }
-		Highlights.CmpItemKindClass = { fg = colors.base0A }
-		Highlights.CmpItemKindInterface = { fg = colors.base0A }
-		Highlights.CmpItemKindStruct = { fg = colors.base0A }
-		Highlights.CmpItemKindEvent = { fg = colors.base0A }
-		Highlights.CmpItemKindEnum = { fg = colors.base0A }
-		Highlights.CmpItemKindUnit = { fg = colors.base0A }
-		Highlights.CmpItemKindModule = { fg = colors.base05 }
-		Highlights.CmpItemKindProperty = { fg = colors.base08 }
-		Highlights.CmpItemKindField = { fg = colors.base08 }
-		Highlights.CmpItemKindTypeParameter = { fg = colors.base0A }
-		Highlights.CmpItemKindEnumMember = { fg = colors.base0A }
-		Highlights.CmpItemKindOperator = { fg = colors.base05 }
-		Highlights.CmpItemKindSnippet = { fg = colors.base04 }
-	end
+	Highlights.CmpDocumentationBorder = { fg = colors.base05, bg = colors.base00 }
+	Highlights.CmpDocumentation = { fg = colors.base05, bg = colors.base00 }
+	Highlights.CmpItemAbbr = { fg = colors.base05, bg = colors.base01 }
+	Highlights.CmpItemAbbrDeprecated = { fg = colors.base03 }
+	Highlights.CmpItemAbbrMatch = { fg = colors.base0D }
+	Highlights.CmpItemAbbrMatchFuzzy = { fg = colors.base0D }
+	Highlights.CmpItemKindDefault = { fg = colors.base05 }
+	Highlights.CmpItemMenu = { fg = colors.base04 }
+	Highlights.CmpItemKindKeyword = { fg = colors.base0E }
+	Highlights.CmpItemKindVariable = { fg = colors.base08 }
+	Highlights.CmpItemKindConstant = { fg = colors.base09 }
+	Highlights.CmpItemKindReference = { fg = colors.base08 }
+	Highlights.CmpItemKindValue = { fg = colors.base09 }
+	Highlights.CmpItemKindFunction = { fg = colors.base0D }
+	Highlights.CmpItemKindMethod = { fg = colors.base0D }
+	Highlights.CmpItemKindConstructor = { fg = colors.base0D }
+	Highlights.CmpItemKindClass = { fg = colors.base0A }
+	Highlights.CmpItemKindInterface = { fg = colors.base0A }
+	Highlights.CmpItemKindStruct = { fg = colors.base0A }
+	Highlights.CmpItemKindEvent = { fg = colors.base0A }
+	Highlights.CmpItemKindEnum = { fg = colors.base0A }
+	Highlights.CmpItemKindUnit = { fg = colors.base0A }
+	Highlights.CmpItemKindModule = { fg = colors.base05 }
+	Highlights.CmpItemKindProperty = { fg = colors.base08 }
+	Highlights.CmpItemKindField = { fg = colors.base08 }
+	Highlights.CmpItemKindTypeParameter = { fg = colors.base0A }
+	Highlights.CmpItemKindEnumMember = { fg = colors.base0A }
+	Highlights.CmpItemKindOperator = { fg = colors.base05 }
+	Highlights.CmpItemKindSnippet = { fg = colors.base04 }
 
-	if M.config.mini_completion then
-		Highlights.MiniCompletionActiveParameter = "CursorLine"
-	end
+	Highlights.MiniCompletionActiveParameter = "CursorLine"
 
 	for group, args in pairs(Highlights) do
 		require("base16.utils").highlight(group, args)
