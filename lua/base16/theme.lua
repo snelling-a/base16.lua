@@ -368,21 +368,6 @@ function M.load(colors)
 	Highlights.User9 = { fg = colors.base00, bg = colors.base02 }
 	-- }}}
 
-	-- TSRainbow {{{
-	local rainbow_colors =
-		{ colors.base09, colors.base0A, colors.base0B, colors.base0C, colors.base0D, colors.base0E, colors.base0F }
-
-	-- HiPhish/nvim-ts-rainbow2
-	-- NOTE: the base16 colors do not reflect the highlight group name
-	local rainbow2 = { "Red", "Yellow", "Blue", "Orange", "Green", "Violet", "Cyan" }
-	for index, value in ipairs(rainbow2) do
-		Highlights["TSRainbow" .. value] = { fg = rainbow_colors[index] }
-	end
-
-	-- mrjones1024/ts-rainbow
-	for i = 1, #rainbow_colors, 1 do
-		Highlights["rainbowlcol" .. i] = { fg = rainbow_colors[1] }
-	end
 	-- }}}
 
 	Highlights.IndentBlanklineChar = { fg = colors.base02 }
