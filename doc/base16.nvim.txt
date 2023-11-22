@@ -124,6 +124,7 @@ BUILTIN COLORSCHEMES            *base16.nvim-base16.nvim-builtin-colorschemes*
 - eva-dim
 - eva
 - evenok-dark
+- everforest-dark-hard
 - everforest
 - flat
 - framer
@@ -193,6 +194,8 @@ BUILTIN COLORSCHEMES            *base16.nvim-base16.nvim-builtin-colorschemes*
 - one-light
 - onedark
 - outrun-dark
+- oxocarbon-dark
+- oxocarbon-light
 - pandora
 - papercolor-dark
 - papercolor-light
