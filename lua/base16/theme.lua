@@ -109,7 +109,7 @@ function M.load(colors)
 	Highlights.Conditional = { fg = colors.base0E }
 	Highlights.Constant = { fg = colors.base09 }
 	Highlights.Define = { fg = colors.base0E }
-	Highlights.Delimiter = { fg = colors.base0F }
+	Highlights.Delimiter = { fg = colors.base05 }
 	Highlights.Float = { fg = colors.base09 }
 	Highlights.Function = { fg = colors.base0D }
 	Highlights.Identifier = { fg = colors.base08 }
@@ -215,6 +215,16 @@ function M.load(colors)
 	Highlights["@lsp.type.type"] = { link = "@type", default = true }
 	Highlights["@lsp.type.variable"] = { link = "@variable", default = true }
 	-- }}}
+
+	--- RAINBOW-DELIMETERS {{{
+	Highlights.RainbowDelimiterRed = { fg = colors.base08 }
+	Highlights.RainbowDelimiterYellow = { fg = colors.base0A }
+	Highlights.RainbowDelimiterBlue = { fg = colors.base0D }
+	Highlights.RainbowDelimiterOrange = { fg = colors.base09 }
+	Highlights.RainbowDelimiterGreen = { fg = colors.base0B }
+	Highlights.RainbowDelimiterViolet = { fg = colors.base0E }
+	Highlights.RainbowDelimiterCyan = { fg = colors.base0C }
+	--- }}}
 
 	-- Treesitter {{{
 	Highlights.TSAnnotation = { fg = colors.base0F }
