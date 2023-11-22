@@ -113,6 +113,7 @@ require('base16-colorscheme').setup({
 - eva-dim
 - eva
 - evenok-dark
+- everforest-dark-hard
 - everforest
 - flat
 - framer
@@ -182,6 +183,8 @@ require('base16-colorscheme').setup({
 - one-light
 - onedark
 - outrun-dark
+- oxocarbon-dark
+- oxocarbon-light
 - pandora
 - papercolor-dark
 - papercolor-light
