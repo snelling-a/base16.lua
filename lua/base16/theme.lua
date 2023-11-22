@@ -1,4 +1,4 @@
--- vim:foldmethod=marker
+-- vim:foldmethod=marker:foldlevel=0:foldlevelstart=0
 -- Some useful links for making your own colorscheme:
 -- https://github.com/chriskempson/base16
 -- https://colourco.de/
