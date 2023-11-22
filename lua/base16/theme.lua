@@ -53,7 +53,7 @@ function M.load(colors)
 	Highlights.Cursor = { fg = colors.base00, bg = colors.base05 }
 	Highlights.CursorColumn = { link = "CursorLine" }
 	Highlights.CursorLine = { bg = colors.base01 }
-	Highlights.CursorLineNr = { fg = colors.base04, bg = colors.base01 }
+	Highlights.CursorLineNr = { fg = colors.base06, bg = colors.base01 }
 	Highlights.Debug = { fg = colors.base08 }
 	Highlights.Directory = { fg = colors.base0D }
 	Highlights.Error = { fg = colors.base00, bg = colors.base08 }
@@ -61,18 +61,21 @@ function M.load(colors)
 	Highlights.Exception = { fg = colors.base08 }
 	Highlights.FoldColumn = { fg = colors.base0C }
 	Highlights.Folded = { fg = colors.base03, bg = colors.base01 }
+	Highlights.FoldedText = { link = "TSComment" }
 	Highlights.IncSearch = { fg = colors.base01, bg = colors.base09 }
 	Highlights.Italic = { italic = true }
 	Highlights.LineNr = { fg = colors.base04 }
 	Highlights.Macro = { fg = colors.base08 }
 	Highlights.MatchParen = { bg = colors.base03 }
-	Highlights.ModeMsg = { fg = colors.base0B }
+	Highlights.ModeMsg = { fg = colors.base0B, bg = nil }
+	Highlights.MoreMsg = { link = "ModeMsg" }
 	Highlights.NonText = { fg = colors.base03 }
 	Highlights.Normal = { fg = colors.base05, bg = colors.base00 }
-	Highlights.PMenu = { fg = colors.base05, bg = colors.base01 }
+	Highlights.PMenu = { fg = colors.base05 }
 	Highlights.PMenuSel = { fg = colors.base01, bg = colors.base05 }
 	Highlights.Question = { fg = colors.base0D }
 	Highlights.QuickFixLine = { link = "CursorLine" }
+	Highlights.RulerFormat = { fg = colors.base0D }
 	Highlights.Search = { fg = colors.base01, bg = colors.base0A }
 	Highlights.SignColumn = { fg = colors.base04 }
 	Highlights.SpecialKey = { fg = colors.base03 }
@@ -80,7 +83,7 @@ function M.load(colors)
 	Highlights.StatusLineNC = { fg = colors.base04 }
 	Highlights.Substitute = { fg = colors.base01, bg = colors.base0A }
 	Highlights.TabLine = { link = "StatusLineNC" }
-	Highlights.TabLineFill = { link = "StatusLine" }
+	Highlights.TabLineFill = { link = "StatusLineNC" }
 	Highlights.TabLineSel = { fg = colors.base0B, bg = colors.base02 }
 	Highlights.TermCursor = { fg = colors.base00, bg = colors.base05 }
 	Highlights.TermCursorNC = { fg = colors.base00, bg = colors.base05 }
@@ -177,7 +180,7 @@ function M.load(colors)
 	Highlights.DiagnosticUnderlineInfo = { undercurl = true, sp = colors.base05 }
 	Highlights.DiagnosticUnderlineOk = { undercurl = true, sp = colors.base0B }
 	Highlights.DiagnosticUnderlineWarn = { undercurl = true, sp = colors.base0E }
-	Highlights.DiagnosticUnderlineWarning = { undercurl = true, sp = colors.base0E }
+	Highlights.DiagnosticUnderlineWarning = { link = "DiagnosticUnderlineWarn" }
 	Highlights.DiagnosticWarn = { fg = colors.base0E }
 	-- }}}
 
