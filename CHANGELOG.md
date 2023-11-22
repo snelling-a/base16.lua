@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.8.0](https://github.com/snelling-a/base16.nvim/compare/v2.7.2...v2.8.0) (2023-11-22)
+
+
+### Features
+
+* rainbow-delimeters ([5313dfd](https://github.com/snelling-a/base16.nvim/commit/5313dfd8022aa6c336a91ac04a140a14fc15cfcf))
+* rainbow-delimeters ([5d22e58](https://github.com/snelling-a/base16.nvim/commit/5d22e585f42e3f7f85b246b64d19df1229214055))
+
 ## [2.7.2](https://github.com/snelling-a/base16.nvim/compare/v2.7.1...v2.7.2) (2023-11-22)
 
 
