@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.7.2](https://github.com/snelling-a/base16.nvim/compare/v2.7.1...v2.7.2) (2023-11-22)
+
+
+### Bug Fixes
+
+* search ([b6fcd82](https://github.com/snelling-a/base16.nvim/commit/b6fcd8223b60c8b646e788b01e95353fc49d6c5f))
+
+
+### Miscellaneous
+
+* update colorschemes ([0e5a45e](https://github.com/snelling-a/base16.nvim/commit/0e5a45e8ff2c2d8e818a92579fee0990898644f2))
+
 ## [2.7.1](https://github.com/snelling-a/base16.nvim/compare/v2.7.0...v2.7.1) (2023-08-31)
 
 
