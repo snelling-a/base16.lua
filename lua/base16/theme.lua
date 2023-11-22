@@ -184,7 +184,14 @@ function M.load(colors)
 	Highlights.DiagnosticWarn = { fg = colors.base0E }
 	-- }}}
 
-	-- LSP {{{
+	-- DAP {{{
+	Highlights.Breakpoint = { link = "DiagnosticError" }
+	Highlights.BreakpointCondition = { link = "DiagnosticUnderlineWarn" }
+	Highlights.BreakpointRejected = { link = "DiagnosticUnderlineError" }
+	Highlights.LogPoint = { link = "DiagnosticHint" }
+	Highlights.Stopped = { link = "DiagnosticError" }
+	-- }}}
+
 	Highlights.LspCodeLens = { link = "TSComment" }
 	Highlights.LspCodeLensSeparator = { link = "TSComment" }
 	Highlights.LspDiagnosticsDefaultError = { link = "DiagnosticError" }
