@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.0](https://github.com/snelling-a/base16.nvim/compare/v2.8.0...v2.9.0) (2023-11-22)
+
+
+### Features
+
+* dap ([70e7b73](https://github.com/snelling-a/base16.nvim/commit/70e7b739a9077ba32c0308555fd9bee321ae9740))
+
 ## [2.8.0](https://github.com/snelling-a/base16.nvim/compare/v2.7.2...v2.8.0) (2023-11-22)
 
 
