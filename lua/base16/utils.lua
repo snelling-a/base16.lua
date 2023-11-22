@@ -12,12 +12,12 @@ local function parse_color(color)
 	return color
 end
 
-local Utils = {}
+local M = {}
 
 ---wrapper for |nvim_set_hl()|
 ---@param group string
 ---@param colors table|string: Colors Keys: fg,bg,sp,underline,undercurl,nocombine
-function Utils.highlight(group, colors)
+function M.highlight(group, colors)
 	local hi = vim.api.nvim_set_hl
 	if type(colors) == "string" then
 		hi(0, group, { link = colors })
@@ -31,4 +31,4 @@ function Utils.highlight(group, colors)
 	end
 end
 
-return Utils
+return M
