@@ -49,6 +49,7 @@ function M.load(colors)
 	Highlights.Bold = { bold = true }
 	Highlights.ColorColumn = { link = "CursorLine" }
 	Highlights.Conceal = { fg = colors.base0D }
+	Highlights.CurSearch = { link = "Search" }
 	Highlights.Cursor = { fg = colors.base00, bg = colors.base05 }
 	Highlights.CursorColumn = { link = "CursorLine" }
 	Highlights.CursorLine = { bg = colors.base01 }
@@ -72,8 +73,7 @@ function M.load(colors)
 	Highlights.PMenuSel = { fg = colors.base01, bg = colors.base05 }
 	Highlights.Question = { fg = colors.base0D }
 	Highlights.QuickFixLine = { link = "CursorLine" }
-	-- Highlights.Search = { fg = colors.base01, bg = colors.base0A }
-	Highlights.Search = { reverse = true }
+	Highlights.Search = { fg = colors.base01, bg = colors.base0A }
 	Highlights.SignColumn = { fg = colors.base04 }
 	Highlights.SpecialKey = { fg = colors.base03 }
 	Highlights.StatusLine = { fg = colors.base05, bg = colors.base02 }
