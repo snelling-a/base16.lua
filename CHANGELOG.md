@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.0](https://github.com/snelling-a/base16.nvim/compare/v2.9.0...v2.10.0) (2024-01-22)
+
+
+### Features
+
+* **treesitter:** update to reflect breaking changes ([7f68894](https://github.com/snelling-a/base16.nvim/commit/7f68894ba5d58b6bf7bd06f7fac1f7d0c57410c8))
+
 ## [2.9.0](https://github.com/snelling-a/base16.nvim/compare/v2.8.0...v2.9.0) (2023-11-22)
 
 
