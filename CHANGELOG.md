@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.1](https://github.com/snelling-a/base16.nvim/compare/v2.10.0...v2.10.1) (2024-02-05)
+
+
+### Bug Fixes
+
+* **git:** highlighting for gitsigns ([f6f6c94](https://github.com/snelling-a/base16.nvim/commit/f6f6c942b44163b7c132244ae96a40d49e76196b))
+
 ## [2.10.0](https://github.com/snelling-a/base16.nvim/compare/v2.9.0...v2.10.0) (2024-01-22)
 
 
