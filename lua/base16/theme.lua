@@ -133,21 +133,24 @@ function M.load(colors)
 	-- }}}
 
 	-- Diff highlighting {{{
-	Highlights.DiffAdd = { fg = colors.base0B }
+	Highlights.Added = { fg = colors.base0B }
+	Highlights.Changed = { fg = colors.base0E }
+	Highlights.DiffAdd = { link = "Added" }
+	Highlights.DiffAdded = { link = "DiffAdd" }
 	Highlights.DiffChange = { fg = colors.base0E }
-	Highlights.DiffDelete = { fg = colors.base08 }
-	Highlights.DiffText = { fg = colors.base0D }
-	Highlights.DiffAdded = { fg = colors.base0B }
+	Highlights.DiffDelete = { link = "Removed" }
 	Highlights.DiffFile = { fg = colors.base08 }
-	Highlights.DiffNewFile = { fg = colors.base0B }
 	Highlights.DiffLine = { fg = colors.base0E }
-	Highlights.DiffRemoved = { fg = colors.base08 }
+	Highlights.DiffNewFile = { fg = colors.base0B }
+	Highlights.DiffRemoved = { link = "DiffDelete" }
+	Highlights.DiffText = { fg = colors.base0D }
+	Highlights.Removed = { fg = colors.base08 }
 	-- }}}
 
 	-- Git commit highlighting {{{
 	Highlights.gitcommitOverflow = { link = "ErrorMsg" }
 	Highlights.gitcommitSummary = { fg = colors.base0B }
-	Highlights.gitcommitComment = { fg = colors.base03 }
+	Highlights.gitcommitComment = { link = "Comment" }
 	Highlights.gitcommitUntracked = { link = "NonText" }
 	Highlights.gitcommitDiscarded = { fg = colors.base08 }
 	Highlights.gitcommitSelected = { fg = colors.base02 }
@@ -156,7 +159,7 @@ function M.load(colors)
 	Highlights.gitcommitUnmergedType = { fg = colors.base0D }
 	Highlights.gitcommitDiscardedType = { fg = colors.base0D }
 	Highlights.gitcommitBranch = { fg = colors.base0E, bold = true }
-	Highlights.gitcommitUntrackedFile = { fg = colors.base03 }
+	Highlights.gitcommitUntrackedFile = { link = "NonText" }
 	Highlights.gitcommitUnmergedFile = { fg = colors.base08, bold = true }
 	Highlights.gitcommitDiscardedFile = { fg = colors.base08, bold = true }
 	Highlights.gitcommitSelectedFile = { fg = colors.base0B, bold = true }
