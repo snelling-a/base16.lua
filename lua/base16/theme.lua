@@ -48,7 +48,7 @@ function M.load(colors)
 	-- Vim editor colors {{{
 	Highlights.Bold = { bold = true }
 	Highlights.ColorColumn = { link = "CursorLine" }
-	Highlights.Conceal = { fg = colors.base0D }
+	Highlights.Conceal = { link = "NonText" }
 	Highlights.CurSearch = { link = "Search" }
 	Highlights.Cursor = { fg = colors.base00, bg = colors.base05 }
 	Highlights.CursorColumn = { link = "CursorLine" }
@@ -105,7 +105,7 @@ function M.load(colors)
 	-- Standard syntax highlighting {{{
 	Highlights.Boolean = { fg = colors.base09 }
 	Highlights.Character = { fg = colors.base08 }
-	Highlights.Comment = { fg = colors.base03 }
+	Highlights.Comment = { link = "NonText" }
 	Highlights.Conditional = { fg = colors.base0E }
 	Highlights.Constant = { fg = colors.base09 }
 	Highlights.Define = { fg = colors.base0E }
@@ -195,8 +195,9 @@ function M.load(colors)
 	Highlights.Stopped = { link = "DiagnosticError" }
 	-- }}}
 
-	Highlights.LspCodeLens = { link = "TSComment" }
-	Highlights.LspCodeLensSeparator = { link = "TSComment" }
+	-- LSP {{{
+	Highlights.LspCodeLens = { link = "Comment" }
+	Highlights.LspCodeLensSeparator = { link = "Comment" }
 	Highlights.LspDiagnosticsDefaultError = { link = "DiagnosticError" }
 	Highlights.LspDiagnosticsDefaultHint = { link = "DiagnosticHint" }
 	Highlights.LspDiagnosticsDefaultInformation = { link = "DiagnosticInfo" }
@@ -205,11 +206,10 @@ function M.load(colors)
 	Highlights.LspDiagnosticsUnderlineHint = { link = "DiagnosticUnderlineHint" }
 	Highlights.LspDiagnosticsUnderlineInformation = { link = "DiagnosticUnderlineInformation" }
 	Highlights.LspDiagnosticsUnderlineWarning = { link = "DiagnosticUnderlineWarning" }
-	Highlights.LspInlayHint = { link = "TSComment" }
+	Highlights.LspInlayHint = { link = "Comment" }
 	Highlights.LspReferenceRead = { bg = colors.base02, sp = colors.base02 }
 	Highlights.LspReferenceText = { bg = colors.base02, sp = colors.base02 }
 	Highlights.LspReferenceWrite = { bg = colors.base02, sp = colors.base02 }
-	Highlights.LspSignatureActiveParameter = { link = "TSComment" }
 	Highlights["@lsp.type.class"] = { link = "@type", default = true }
 	Highlights["@lsp.type.decorator"] = { link = "@function", default = true }
 	Highlights["@lsp.type.enum"] = { link = "@type", default = true }
@@ -224,6 +224,7 @@ function M.load(colors)
 	Highlights["@lsp.type.struct"] = { link = "@structure", default = true }
 	Highlights["@lsp.type.type"] = { link = "@type", default = true }
 	Highlights["@lsp.type.variable"] = { link = "@variable", default = true }
+	Highlights.LspSignatureActiveParameter = { link = "Comment" }
 	-- }}}
 
 	--- RAINBOW-DELIMETERS {{{
@@ -504,7 +505,11 @@ function M.load(colors)
 	Highlights.CmpItemKindOperator = { fg = colors.base05 }
 	Highlights.CmpItemKindSnippet = { fg = colors.base04 }
 
+
 	Highlights.MiniCompletionActiveParameter = "CursorLine"
+	-- COPILOT {{{
+	Highlights.CopilotSuggestion = { link = "TSComment" }
+	-- }}}
 
 	for group, args in pairs(Highlights) do
 		require("base16.utils").highlight(group, args)
