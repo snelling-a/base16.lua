@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.2](https://github.com/snelling-a/base16.nvim/compare/v2.10.1...v2.10.2) (2024-02-07)
+
+
+### Bug Fixes
+
+* comments/inlay hints ([66df6f1](https://github.com/snelling-a/base16.nvim/commit/66df6f1a09e69a174678ee39078ec77052f41bfe))
+
 ## [2.10.1](https://github.com/snelling-a/base16.nvim/compare/v2.10.0...v2.10.1) (2024-02-05)
 
 
