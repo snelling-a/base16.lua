@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.11.1](https://github.com/snelling-a/base16.nvim/compare/v2.11.0...v2.11.1) (2024-02-08)
+
+
+### Bug Fixes
+
+* **lsp:** semantic highlighting/unnecessary sp ([3c15590](https://github.com/snelling-a/base16.nvim/commit/3c15590e8edd0b208f536422c706dd4bfdf525d8))
+
 ## [2.11.0](https://github.com/snelling-a/base16.nvim/compare/v2.10.2...v2.11.0) (2024-02-08)
 
 
