@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.11.0](https://github.com/snelling-a/base16.nvim/compare/v2.10.2...v2.11.0) (2024-02-08)
+
+
+### Features
+
+* illuminated ([ed91ac0](https://github.com/snelling-a/base16.nvim/commit/ed91ac0898e81e2da13c2fb8500b3b6565cd8e92))
+
 ## [2.10.2](https://github.com/snelling-a/base16.nvim/compare/v2.10.1...v2.10.2) (2024-02-07)
 
 
