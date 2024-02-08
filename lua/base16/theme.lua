@@ -193,6 +193,15 @@ function M.load(colors)
 	Highlights.BreakpointRejected = { link = "DiagnosticUnderlineError" }
 	Highlights.LogPoint = { link = "DiagnosticHint" }
 	Highlights.Stopped = { link = "DiagnosticError" }
+
+	-- }}}
+
+	-- ILLUMINATED {{{
+
+	Highlights.IlluminatedWordText = { link = "LspReferenceText" }
+	Highlights.IlluminatedWordRead = { link = "LspReferenceRead" }
+	Highlights.IlluminatedWordWrite = { link = "LspReferenceWrite" }
+
 	-- }}}
 
 	-- LSP {{{
