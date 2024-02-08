@@ -205,6 +205,7 @@ function M.load(colors)
 	-- }}}
 
 	-- LSP {{{
+
 	Highlights.LspCodeLens = { link = "Comment" }
 	Highlights.LspCodeLensSeparator = { link = "Comment" }
 	Highlights.LspDiagnosticsDefaultError = { link = "DiagnosticError" }
@@ -215,25 +216,17 @@ function M.load(colors)
 	Highlights.LspDiagnosticsUnderlineHint = { link = "DiagnosticUnderlineHint" }
 	Highlights.LspDiagnosticsUnderlineInformation = { link = "DiagnosticUnderlineInformation" }
 	Highlights.LspDiagnosticsUnderlineWarning = { link = "DiagnosticUnderlineWarning" }
+	Highlights.LspInfoBorder = { link = "Normal" }
 	Highlights.LspInlayHint = { link = "Comment" }
-	Highlights.LspReferenceRead = { bg = colors.base02, sp = colors.base02 }
-	Highlights.LspReferenceText = { bg = colors.base02, sp = colors.base02 }
-	Highlights.LspReferenceWrite = { bg = colors.base02, sp = colors.base02 }
-	Highlights["@lsp.type.class"] = { link = "@type", default = true }
-	Highlights["@lsp.type.decorator"] = { link = "@function", default = true }
-	Highlights["@lsp.type.enum"] = { link = "@type", default = true }
-	Highlights["@lsp.type.enumMember"] = { link = "@constant", default = true }
-	Highlights["@lsp.type.function"] = { link = "@function", default = true }
-	Highlights["@lsp.type.interface"] = { link = "@type", default = true }
-	Highlights["@lsp.type.macro"] = { link = "@macro", default = true }
-	Highlights["@lsp.type.method"] = { link = "@method", default = true }
-	Highlights["@lsp.type.namespace"] = { link = "@namespace", default = true }
-	Highlights["@lsp.type.parameter"] = { link = "@parameter", default = true }
-	Highlights["@lsp.type.property"] = { link = "@property", default = true }
-	Highlights["@lsp.type.struct"] = { link = "@structure", default = true }
-	Highlights["@lsp.type.type"] = { link = "@type", default = true }
-	Highlights["@lsp.type.variable"] = { link = "@variable", default = true }
-	Highlights.LspSignatureActiveParameter = { link = "Comment" }
+	Highlights.LspReferenceRead = { bg = colors.base02 }
+	Highlights.LspReferenceText = { bg = colors.base02 }
+	Highlights.LspReferenceWrite = { bg = colors.base02 }
+	Highlights.LspSignatureActiveParameter = { link = "TSComment" }
+
+	for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight") or {}) do
+		vim.api.nvim_set_hl(0, group, {})
+	end
+
 	-- }}}
 
 	--- RAINBOW-DELIMETERS {{{
