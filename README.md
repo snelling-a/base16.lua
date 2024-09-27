@@ -50,6 +50,7 @@ require('base16-colorscheme').setup({
 - ayu-dark
 - ayu-light
 - ayu-mirage
+- aztec
 - bespin
 - black-metal-bathory
 - black-metal-burzum
@@ -95,6 +96,7 @@ require('base16-colorscheme').setup({
 - darktooth
 - darkviolet
 - decaf
+- deep-oceanic-next
 - default-dark
 - default-light
 - dirtysea
@@ -102,6 +104,7 @@ require('base16-colorscheme').setup({
 - edge-dark
 - edge-light
 - eighties
+- embers-light
 - embers
 - emil
 - equilibrium-dark
@@ -158,6 +161,7 @@ require('base16-colorscheme').setup({
 - icy
 - irblack
 - isotope
+- jabuti
 - kanagawa
 - katy
 - kimber
@@ -170,17 +174,22 @@ require('base16-colorscheme').setup({
 - material-palenight
 - material-vivid
 - material
+- measured-dark
+- measured-light
 - mellow-purple
 - mexico-light
 - mocha
 - monokai
+- moonlight
 - mountain
 - nebula
+- nord-light
 - nord
 - nova
 - ocean
 - oceanicnext
 - one-light
+- onedark-dark
 - onedark
 - outrun-dark
 - oxocarbon-dark
@@ -195,6 +204,10 @@ require('base16-colorscheme').setup({
 - pinky
 - pop
 - porple
+- precious-dark-eleven
+- precious-dark-fifteen
+- precious-light-warm
+- precious-light-white
 - primer-dark-dimmed
 - primer-dark
 - primer-light
@@ -205,6 +218,7 @@ require('base16-colorscheme').setup({
 - rose-pine-dawn
 - rose-pine-moon
 - rose-pine
+- saga
 - sagelight
 - sakura
 - sandcastle
@@ -226,6 +240,7 @@ require('base16-colorscheme').setup({
 - solarized-light
 - spaceduck
 - spacemacs
+- sparky
 - standardized-dark
 - standardized-light
 - stella
@@ -238,12 +253,15 @@ require('base16-colorscheme').setup({
 - tango
 - tarot
 - tender
+- terracotta-dark
+- terracotta
 - tokyo-city-dark
 - tokyo-city-light
 - tokyo-city-terminal-dark
 - tokyo-city-terminal-light
 - tokyo-night-dark
 - tokyo-night-light
+- tokyo-night-moon
 - tokyo-night-storm
 - tokyo-night-terminal-dark
 - tokyo-night-terminal-light
@@ -259,6 +277,7 @@ require('base16-colorscheme').setup({
 - unikitty-light
 - unikitty-reversible
 - uwunicorn
+- vesper
 - vice
 - vulcan
 - windows-10-light
