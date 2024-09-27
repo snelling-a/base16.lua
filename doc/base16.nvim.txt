@@ -1,4 +1,4 @@
-*base16.nvim.txt*        For NVIM >v0.8.0        Last change: 2024 February 26
+*base16.nvim.txt*        For NVIM >v0.8.0       Last change: 2024 September 27
 
 ==============================================================================
 Table of Contents                              *base16.nvim-table-of-contents*
@@ -61,6 +61,7 @@ BUILTIN COLORSCHEMES            *base16.nvim-base16.nvim-builtin-colorschemes*
 - ayu-dark
 - ayu-light
 - ayu-mirage
+- aztec
 - bespin
 - black-metal-bathory
 - black-metal-burzum
@@ -106,6 +107,7 @@ BUILTIN COLORSCHEMES            *base16.nvim-base16.nvim-builtin-colorschemes*
 - darktooth
 - darkviolet
 - decaf
+- deep-oceanic-next
 - default-dark
 - default-light
 - dirtysea
@@ -113,6 +115,7 @@ BUILTIN COLORSCHEMES            *base16.nvim-base16.nvim-builtin-colorschemes*
 - edge-dark
 - edge-light
 - eighties
+- embers-light
 - embers
 - emil
 - equilibrium-dark
@@ -169,6 +172,7 @@ BUILTIN COLORSCHEMES            *base16.nvim-base16.nvim-builtin-colorschemes*
 - icy
 - irblack
 - isotope
+- jabuti
 - kanagawa
 - katy
 - kimber
@@ -181,17 +185,22 @@ BUILTIN COLORSCHEMES            *base16.nvim-base16.nvim-builtin-colorschemes*
 - material-palenight
 - material-vivid
 - material
+- measured-dark
+- measured-light
 - mellow-purple
 - mexico-light
 - mocha
 - monokai
+- moonlight
 - mountain
 - nebula
+- nord-light
 - nord
 - nova
 - ocean
 - oceanicnext
 - one-light
+- onedark-dark
 - onedark
 - outrun-dark
 - oxocarbon-dark
@@ -206,6 +215,10 @@ BUILTIN COLORSCHEMES            *base16.nvim-base16.nvim-builtin-colorschemes*
 - pinky
 - pop
 - porple
+- precious-dark-eleven
+- precious-dark-fifteen
+- precious-light-warm
+- precious-light-white
 - primer-dark-dimmed
 - primer-dark
 - primer-light
@@ -216,6 +229,7 @@ BUILTIN COLORSCHEMES            *base16.nvim-base16.nvim-builtin-colorschemes*
 - rose-pine-dawn
 - rose-pine-moon
 - rose-pine
+- saga
 - sagelight
 - sakura
 - sandcastle
@@ -237,6 +251,7 @@ BUILTIN COLORSCHEMES            *base16.nvim-base16.nvim-builtin-colorschemes*
 - solarized-light
 - spaceduck
 - spacemacs
+- sparky
 - standardized-dark
 - standardized-light
 - stella
@@ -249,12 +264,15 @@ BUILTIN COLORSCHEMES            *base16.nvim-base16.nvim-builtin-colorschemes*
 - tango
 - tarot
 - tender
+- terracotta-dark
+- terracotta
 - tokyo-city-dark
 - tokyo-city-light
 - tokyo-city-terminal-dark
 - tokyo-city-terminal-light
 - tokyo-night-dark
 - tokyo-night-light
+- tokyo-night-moon
 - tokyo-night-storm
 - tokyo-night-terminal-dark
 - tokyo-night-terminal-light
@@ -270,6 +288,7 @@ BUILTIN COLORSCHEMES            *base16.nvim-base16.nvim-builtin-colorschemes*
 - unikitty-light
 - unikitty-reversible
 - uwunicorn
+- vesper
 - vice
 - vulcan
 - windows-10-light
